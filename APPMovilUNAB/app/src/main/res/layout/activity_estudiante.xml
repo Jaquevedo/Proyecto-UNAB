@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CAF3F8">
+
+    <ImageView
+        android:id="@+id/ImageV2"
+        android:layout_width="140dp"
+        android:layout_height="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/camera"
+        tools:ignore="ContentDescription,ImageContrastCheck"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Button
+        android:id="@+id/Butt9"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018685"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/Butt9"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageV2" />
+
+    <TextView
+        android:id="@+id/textViewEstudiante"
+        android:layout_width="186dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/estudiante"
+        android:textColor="#018685"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextV9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/TextV9"
+        android:textAlignment="center"
+        android:textColor="#025756"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Butt9" />
+
+    <TableLayout
+        android:id="@+id/TablLayout1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextV9"
+        tools:ignore="MissingConstraints">
+
+        <TableRow android:background="@color/azul_claro">
+
+            <TextView
+                android:id="@+id/TabLyTextV1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout"
+                android:backgroundTint="#018685"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text="@string/row1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/TabLyTextV2"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout"
+                android:backgroundTint="#018685"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+        </TableRow>
+
+        <TableRow android:background="@color/clarito">
+
+            <TextView
+                android:id="@+id/TabLyTextV3"
+                android:layout_width="59dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout1"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text="@string/row2"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/TabLyTextV4"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout1"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/azul"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow android:background="@color/azul_claro">
+
+            <TextView
+                android:id="@+id/TabLyTextV5"
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout"
+                android:backgroundTint="#018685"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text="@string/row3"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/TabLyTextV6"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout"
+                android:backgroundTint="#018685"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/azul"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow android:background="@color/clarito">
+
+            <TextView
+                android:id="@+id/TabLyTextV7"
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout1"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text="@string/row4"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/TabLyTextV8"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout1"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_bold"
+                android:padding="10sp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/azul"
+                android:textSize="16sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/Butt10"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018685"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/Butt10"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TablLayout1" />
+
+    <ImageButton
+        android:id="@+id/ImageButt11"
+        android:layout_width="82dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="12dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/salud_appx48"
+        tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="648dp" />
+
+    <ImageButton
+        android:id="@+id/ImageButt12"
+        android:layout_width="136dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#CAF3F8"
+        app:layout_constraintEnd_toStartOf="@+id/ImageButt11"
+        app:srcCompat="@drawable/u_abc"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="641dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:tint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CAF3F8">
+
+    <ImageView
+        android:id="@+id/ImageV3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/logooo_foreground"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/TextV12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018483"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/TextV12"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageV3"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/EditTextUsuario"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_styles"
+        android:backgroundTint="#9DD6DD"
+        android:ems="10"
+        android:hint="@string/EditTextUsuario1"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#689F38"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextV12"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/EditTextPassword"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_styles"
+        android:backgroundTint="#9CD5DC"
+        android:ems="10"
+        android:hint="@string/EditTextPassword1"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextUsuario"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/Butt11"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018584"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/Butt11"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextPassword" />
+
+    <TextView
+        android:id="@+id/TextV13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextV13"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Butt11" />
+
+    <ImageView
+        android:id="@+id/ImageV4"
+        android:layout_width="144dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/ImageV4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextV13"
+        app:srcCompat="@drawable/u_abc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
