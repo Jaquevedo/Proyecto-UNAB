@@ -12,7 +12,9 @@ import android.widget.Toast;
 public class Detalle_Estudiante extends AppCompatActivity {
 
     String x="FUNCIONA";
-    TextView docData;
+    TextView nameData;
+    TextView progData;
+    TextView emailData;
 
 
     @Override
@@ -21,15 +23,21 @@ public class Detalle_Estudiante extends AppCompatActivity {
         setContentView(R.layout.activity_detalle_estudiante);
         Bundle extras = getIntent().getExtras();
         String d1 = extras.getString("dato");
-        docData = (TextView) findViewById(R.id.nameData);
-        docData.setText(d1);
+        String d2 = extras.getString("dato1");
+        String d3 = extras.getString("dato2");
+        nameData = (TextView) findViewById(R.id.nameData);
+        progData = (TextView) findViewById(R.id.progData);
+        emailData = (TextView) findViewById(R.id.emailData);
+        nameData.setText(d1);
+        progData.setText(d2);
+        emailData.setText(d3);
     }
     public void viewHistorial(View view) {
         //textView.setText("FUNCIONA");
         switch (view.getId()){
             case R.id.btnBackEst:
             case R.id.btnHistoryEst:
-                Intent intentHist=new Intent(Detalle_Estudiante.this, Listado_estudiantes.class);
+                Intent intentHist=new Intent(Detalle_Estudiante.this, List_profe.class);
                 startActivity(intentHist);
                 break;
 

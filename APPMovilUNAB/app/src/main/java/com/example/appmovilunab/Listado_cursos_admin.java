@@ -10,4 +10,7 @@ public class Listado_cursos_admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_cursos);
     }
+
+    public static class forgotPass {
+    }
 }

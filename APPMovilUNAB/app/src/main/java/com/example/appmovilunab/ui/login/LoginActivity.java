@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import com.example.appmovilunab.Detalle_Curso;
 import com.example.appmovilunab.Listado_docentes;
 import com.example.appmovilunab.MainActivity;
 import com.example.appmovilunab.R;
+import com.example.appmovilunab.forgotPass;
 //import com.example.appmovilunab.password.CambioPassword;
 //import com.example.appmovilunab.password.RestaurarPassword;
 //import com.example.appmovilunab.databinding.ActivityLoginBinding;
@@ -135,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intentProf);
                 break;
             case R.id.forgetpass:
-                Intent intentEst=new Intent(LoginActivity.this, Detalle_Curso.class);
+                Intent intentEst=new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intentEst);
                 break;
 //            case R.id.btnUpdateEst:

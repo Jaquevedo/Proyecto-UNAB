@@ -158,7 +158,9 @@ public class List_profe  extends Activity implements AdapterView.OnItemClickList
 //        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
 //        toast.show();
         Intent intent = new Intent(List_profe.this, Detalle_Estudiante.class);
-        intent.putExtra("dato", x);
+        intent.putExtra("dato", "Federico Fellinii");
+        intent.putExtra("dato1", "Historia del cine");
+        intent.putExtra("dato2", "federicofellini@uabc.com");
         startActivity(intent);
 
 
