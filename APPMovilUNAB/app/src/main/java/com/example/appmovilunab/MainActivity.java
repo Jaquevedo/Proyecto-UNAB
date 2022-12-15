@@ -23,20 +23,25 @@ public class MainActivity extends AppCompatActivity {
         public void viewOption(View view) {
             //textView.setText("FUNCIONA");
             switch (view.getId()){
-                case R.id.btnBack:
+                //case R.id.btnBack:
                 case R.id.btnLogout:
                     Intent intentHist=new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intentHist);
                     break;
 
                 case R.id.Butt1:
-                    Intent intentProf=new Intent(MainActivity.this, Listado_docentes.class);
+                    Intent intentProf=new Intent(MainActivity.this, List_profe.class);
                     startActivity(intentProf);
                     break;
                 case R.id.Butt2:
-                    Intent intentEst=new Intent(MainActivity.this, ImageTextListViewActivity.class);
+                    Intent intentEst=new Intent(MainActivity.this, Lista_Est.class);
                     startActivity(intentEst);
                     break;
+                case R.id.btnBack:
+                    Intent intentEstx=new Intent(MainActivity.this, MainActivityINTENTO.class);
+                    startActivity(intentEstx);
+                    break;
+
 //            case R.id.btnUpdateEst:
 //                Intent intent =new Intent(MainActivity.this, ImageTextListViewActivity.class);
 //                //intent.putExtra("dato", x);

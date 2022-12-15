@@ -103,6 +103,7 @@
     <string name="foto">Foto</string>
     <string name="reporte">Reporte diario:</string>
     <string name="listEstudiantes">Listado estudiantes</string>
+    <string name="listDocentes">Listado docentes</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="forgetpass">¿Olvidaste la contraseña?</string>
     <string name="registrar">REGISTRARSE</string>

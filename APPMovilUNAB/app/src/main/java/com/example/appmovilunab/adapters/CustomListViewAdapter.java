@@ -3,7 +3,6 @@ package com.example.appmovilunab.adapters;
 import android.widget.ArrayAdapter;
 
 import com.example.appmovilunab.R;
-import com.example.appmovilunab.R;
 import com.example.appmovilunab.items.RowItem;
 import java.util.List;
 import android.app.Activity;
@@ -40,9 +39,9 @@ public class CustomListViewAdapter extends ArrayAdapter<RowItem> {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.list_item, null);
             holder = new ViewHolder();
-            holder.txtDesc = (TextView) convertView.findViewById(R.id.desc);
-            holder.txtTitle = (TextView) convertView.findViewById(R.id.title);
-            holder.imageView = (ImageView) convertView.findViewById(R.id.icon);
+            holder.txtDesc = (TextView) convertView.findViewById(R.id.desc1);
+            holder.txtTitle = (TextView) convertView.findViewById(R.id.title1);
+            holder.imageView = (ImageView) convertView.findViewById(R.id.icon1);
             convertView.setTag(holder);
         } else
             holder = (ViewHolder) convertView.getTag();

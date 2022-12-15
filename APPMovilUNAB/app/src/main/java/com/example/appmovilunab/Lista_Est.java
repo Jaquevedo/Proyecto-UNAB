@@ -1,21 +1,24 @@
 package com.example.appmovilunab;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import java.util.ArrayList;
-import java.util.List;
-import android.app.Activity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.appmovilunab.items.RowItem;
 import com.example.appmovilunab.adapters.CustomListViewAdapter;
+import com.example.appmovilunab.items.RowItem;
 
-public class ImageTextListViewActivity  extends Activity implements OnItemClickListener{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lista_Est  extends Activity implements AdapterView.OnItemClickListener {
     String x="FUNCIONA";
     TextView btn3;
     String subtext;
@@ -35,8 +38,8 @@ public class ImageTextListViewActivity  extends Activity implements OnItemClickL
             "20112108145", "20112108198",
             "20112108109" };
 
-    public static final Integer[] images = { R.drawable.straw,
-            R.drawable.banana, R.drawable.orange, R.drawable.mixed };
+    public static final Integer[] images = { R.drawable.habilitado,
+            R.drawable.inhabilitado, R.drawable.habilitado, R.drawable.habilitado};
 
     ListView listView;
     List<RowItem> rowItems;
@@ -47,9 +50,10 @@ public class ImageTextListViewActivity  extends Activity implements OnItemClickL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list);
+        setContentView(R.layout.list1);
         String x="txt";
         TextView btn3;
+        String fruit;
 //
 //        btn3 = (TextView) findViewById(R.id.button3);
 //        btn3.setOnClickListener(new View.OnClickListener() {
@@ -97,30 +101,37 @@ public class ImageTextListViewActivity  extends Activity implements OnItemClickL
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         fruit = String.valueOf(position + 1);
         subtext = String.valueOf(rowItems.get(position));
-        Toast toast = Toast.makeText(getApplicationContext(),
-               // "Item " + (position + 1) + ": " + rowItems.get(position), Toast.LENGTH_SHORT);
-        "Item " + fruit + ": " + subtext, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
+        getFruit(fruit);
+        getSubtext(subtext);
+        Intent intent =new Intent(Lista_Est.this, Detalle_Estudiante.class);
+        intent.putExtra("dato", x);
+        //startActivity(intent);
+
+
+//        Toast toast = Toast.makeText(getApplicationContext(),
+//               // "Item " + (position + 1) + ": " + rowItems.get(position), Toast.LENGTH_SHORT);
+//                "Item " + fruit + ": " + subtext, Toast.LENGTH_SHORT);
+//        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+//        toast.show();
 
         //this.view = "fruit";
 
-       // onItemClick(view);
+        onItemClick(view);
 
 
     }
-//    public void onItemClick(View view){
-//        //setFruit(fruit);
-//        //setSubtext(subtext);
-//
-//        Toast toast = Toast.makeText(getApplicationContext(),
-//                // "Item " + (position + 1) + ": " + rowItems.get(position), Toast.LENGTH_SHORT);
-//                "Item " + fruit + ": " + subtext + view, Toast.LENGTH_SHORT);
-//        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
-//        toast.show();
-//
-//
-//    }
+    public void onItemClick(View view){
+        //setFruit(fruit);
+        //setSubtext(subtext);
+
+        Toast toast = Toast.makeText(getApplicationContext(),
+                // "Item " + (position + 1) + ": " + rowItems.get(position), Toast.LENGTH_SHORT);
+                "Item " + fruit + ": " + subtext + view, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+        toast.show();
+
+
+    }
 
 
 

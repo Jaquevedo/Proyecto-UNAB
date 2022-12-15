@@ -1,18 +1,14 @@
 package com.example.appmovilunab.ui.login;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import com.example.appmovilunab.Detalle_Curso;
 import com.example.appmovilunab.Listado_docentes;
-import com.example.appmovilunab.Listado_estudiantes;
 import com.example.appmovilunab.MainActivity;
 import com.example.appmovilunab.R;
 //import com.example.appmovilunab.password.CambioPassword;
@@ -139,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intentProf);
                 break;
             case R.id.forgetpass:
-                Intent intentEst=new Intent(LoginActivity.this, Listado_estudiantes.class);
+                Intent intentEst=new Intent(LoginActivity.this, Detalle_Curso.class);
                 startActivity(intentEst);
                 break;
 //            case R.id.btnUpdateEst:

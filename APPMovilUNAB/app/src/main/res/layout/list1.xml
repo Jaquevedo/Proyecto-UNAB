@@ -24,7 +24,7 @@
         android:layout_height="39dp"
         android:background="#018685"
         android:gravity="center"
-        android:text="@string/foto"
+        android:text="@string/estado"
         app:layout_constraintBottom_toTopOf="@+id/listEst2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,7 +44,7 @@
         android:layout_height="39dp"
         android:background="#018685"
         android:gravity="center"
-        android:text="@string/reporte"
+        android:text="@string/doc"
         app:layout_constraintBottom_toTopOf="@+id/listEst2"
         app:layout_constraintStart_toEndOf="@+id/textViewlistNameEst" />
 

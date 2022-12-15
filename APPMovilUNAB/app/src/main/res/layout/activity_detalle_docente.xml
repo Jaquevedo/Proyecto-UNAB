@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list"
+    android:id="@+id/listEst2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#CAF3F8"
@@ -100,6 +100,7 @@
                 android:id="@+id/docData"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
+                android:autofillHints=""
                 android:background="#99E0E0"
                 android:inputType="number"
                 android:padding="10dp"
@@ -110,6 +111,7 @@
                 android:textColorLink="@color/black"
                 android:textSize="16sp"
                 android:textStyle="normal"
+                tools:ignore="LabelFor,TouchTargetSizeCheck"
                 tools:text="@string/documentoData" />
         </TableRow>
 
@@ -138,6 +140,7 @@
                 android:id="@+id/nameData"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
+                android:autofillHints=""
                 android:background="#4DBEBD"
                 android:inputType="text"
                 android:padding="10dp"
@@ -147,7 +150,7 @@
                 android:textColorLink="@color/purple_200"
                 android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="TextViewEdits"
+                tools:ignore="LabelFor,TextViewEdits,TouchTargetSizeCheck"
                 tools:text="@string/nameDataProf" />
         </TableRow>
 
@@ -176,6 +179,7 @@
                 android:id="@+id/progData"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
+                android:autofillHints=""
                 android:background="#9AE1E1"
                 android:gravity="bottom"
                 android:inputType="text"
@@ -185,7 +189,8 @@
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="16sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:ignore="LabelFor,TouchTargetSizeCheck" />
         </TableRow>
 
         <TableRow
@@ -219,6 +224,7 @@
                 android:id="@+id/emailData"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:autofillHints=""
                 android:background="#4DBDBC"
                 android:gravity="bottom"
                 android:inputType="textWebEmailAddress"
@@ -228,7 +234,8 @@
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="16sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:ignore="LabelFor,TouchTargetSizeCheck" />
         </TableRow>
 
 

@@ -24,7 +24,7 @@
         android:layout_height="39dp"
         android:background="#018685"
         android:gravity="center"
-        android:text="@string/foto"
+        android:text="@string/estado"
         app:layout_constraintBottom_toTopOf="@+id/listEst2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,7 +44,7 @@
         android:layout_height="39dp"
         android:background="#018685"
         android:gravity="center"
-        android:text="@string/reporte"
+        android:text="@string/doc"
         app:layout_constraintBottom_toTopOf="@+id/listEst2"
         app:layout_constraintStart_toEndOf="@+id/textViewlistNameEst" />
 
@@ -52,19 +52,22 @@
         android:id="@+id/textView99210"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/listEstudiantes"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/listDocentes"
         android:textColor="#018584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/ListEstBackBtn"
         android:layout_width="53dp"
         android:layout_height="36dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#C9F2F7"
+        app:layout_constraintEnd_toStartOf="@+id/textView99210"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
@@ -73,11 +76,13 @@
         android:id="@+id/ListEstLgtBtn"
         android:layout_width="57dp"
         android:layout_height="41dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="#C9F2F7"
         android:tint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/textView99210"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logout" />
 
