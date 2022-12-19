@@ -1,0 +1,1 @@
+En esta carpeta se reserva para agregar todos los adaptadores
