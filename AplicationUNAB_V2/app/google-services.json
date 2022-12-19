@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "159784886623",
+    "firebase_url": "https://appsaludunab-default-rtdb.firebaseio.com",
+    "project_id": "appsaludunab",
+    "storage_bucket": "appsaludunab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159784886623:android:f6bf021ccea488f82d16ea",
+        "android_client_info": {
+          "package_name": "com.aplication.aplicationunab_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159784886623-u905s390l67e5gl9coudg5ei5uvsvhcc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aplication.aplicationunab_v2",
+            "certificate_hash": "d7d473abda767a8417ba1ab063af07682a464d16"
+          }
+        },
+        {
+          "client_id": "159784886623-009rs7e3g73ebte1ud7oooo6ighun78e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJG8LbwCK2gxjLM23u3UK2bC_AXHJNgPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159784886623-009rs7e3g73ebte1ud7oooo6ighun78e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
