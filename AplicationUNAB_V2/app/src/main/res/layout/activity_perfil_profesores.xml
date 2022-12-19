@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listEst2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.profesores.PerfilProfesores">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstudiante"
+        app:layout_constraintVertical_bias="0.48000002"
+        app:srcCompat="@drawable/_47144"
+        tools:srcCompat="@drawable/_47144" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="360dp"
+        android:layout_height="230dp"
+        android:layout_marginBottom="5dp"
+        android:background="#A675B39A"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toTopOf="@+id/btnSintomas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstudiante"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/STATE"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="20dp"
+                android:text="@string/estado"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="20dp"
+                android:text="@string/acceso"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/row0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#99E0E0"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:text="@string/doc"
+                android:textColor="#024545"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/docData"
+                android:layout_width="fill_parent"
+                android:layout_height="41dp"
+                android:background="#99E0E0"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="@string/documentoData"
+                android:textColor="#000000"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="@color/black"
+                android:textColorLink="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:text="@string/documentoData"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#4DBFBE"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:text="@string/nombre"
+                android:textColor="#024545"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/nameData"
+                android:layout_width="fill_parent"
+                android:layout_height="41dp"
+                android:background="#4DBEBD"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorLink="@color/purple_200"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:ignore="TextViewEdits,TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/rowC1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#99E0E0"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:text="@string/programa"
+                android:textColor="#024545"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/progData"
+                android:layout_width="fill_parent"
+                android:layout_height="41dp"
+                android:background="#9AE1E1"
+                android:gravity="bottom"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@color/teal_700" />
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#4DBDBC"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:text="@string/email"
+                android:textColor="#024545"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/emailData"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#4DBDBC"
+                android:gravity="bottom"
+                android:inputType="textWebEmailAddress"
+                android:padding="10dp"
+                android:text="@string/emailData"
+                android:textColor="#000000"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:ignore="TouchTargetSizeCheck"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnSintomas"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018685"
+        android:onClick="viewOption"
+        android:text="@string/RegistrarSintomas"
+        app:layout_constraintBottom_toTopOf="@+id/btnHistoryEst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnHistoryEst"
+
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018685"
+        android:onClick="viewOption"
+        android:text="@string/btnHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSintomas"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnCursosProf"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018685"
+        android:onClick="viewOption"
+        android:text="@string/btnCursosProfes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHistoryEst"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/btnBackEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="166dp"
+        android:backgroundTint="#CAF3F8"
+        android:contentDescription="@string/back"
+        android:onClick="viewOption"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/btnBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="#289190"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="logosalud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/btnCursosProf"
+        app:srcCompat="@drawable/salud_appx48"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#CAF3F8"
+        android:backgroundTint="#CAF3F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCursosProf"
+        app:layout_constraintVertical_bias="0.346"
+        app:srcCompat="@drawable/u_abc"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btnLogoutEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="166dp"
+        android:backgroundTint="#CAF3F8"
+        android:onClick="viewOption"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout"
+        app:tint="#FF0000"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnLogoutEst"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogoutEst" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="143dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackEst"
+        app:layout_constraintStart_toStartOf="@+id/btnBackEst"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackEst"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/textViewEstudiante"
+        android:layout_width="159dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/docente"
+        android:textColor="#018685"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogoutEst"
+        app:layout_constraintStart_toEndOf="@+id/btnBackEst"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forgetpass"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="45dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="viewOption"
+        android:text="@string/changePass"
+        android:textColor="#E53935"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCursosProf"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+</android.support.constraint.ConstraintLayout>
