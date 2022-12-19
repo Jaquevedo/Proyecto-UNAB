@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/listEst2"
@@ -11,16 +11,11 @@
         android:id="@+id/btnBack"
         android:layout_width="135dp"
         android:layout_height="135dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="10dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEstudiante"
-        app:layout_constraintVertical_bias="0.48000002"
         app:srcCompat="@drawable/_47144"
         tools:srcCompat="@drawable/_47144" />
 
@@ -28,14 +23,14 @@
         android:id="@+id/tableLayout2"
         android:layout_width="360dp"
         android:layout_height="230dp"
+        android:layout_marginTop="250dp"
         android:layout_marginBottom="5dp"
         android:background="#A675B39A"
         android:stretchColumns="1"
         app:layout_constraintBottom_toTopOf="@+id/btnSintomas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEstudiante"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
         <TableRow
@@ -96,6 +91,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#99E0E0"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:padding="10dp"
                 android:text="@string/documentoData"
@@ -106,8 +102,7 @@
                 android:textSize="16sp"
                 android:textStyle="normal"
                 tools:ignore="TouchTargetSizeCheck"
-                tools:text="@string/documentoData"
-                android:importantForAutofill="no" />
+                tools:text="@string/documentoData" />
         </TableRow>
 
         <TableRow
@@ -136,6 +131,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#4DBEBD"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="#000000"
@@ -143,8 +139,7 @@
                 android:textColorLink="@color/purple_200"
                 android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="TextViewEdits,TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                android:importantForAutofill="no" />
+                tools:ignore="TextViewEdits,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
         <TableRow
@@ -174,6 +169,7 @@
                 android:layout_height="41dp"
                 android:background="#9AE1E1"
                 android:gravity="bottom"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="#000000"
@@ -181,8 +177,7 @@
                 android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                android:importantForAutofill="no" />
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
 
         <TableRow
@@ -218,6 +213,7 @@
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
                 android:gravity="bottom"
+                android:importantForAutofill="no"
                 android:inputType="textWebEmailAddress"
                 android:padding="10dp"
                 android:text="@string/emailData"
@@ -226,8 +222,7 @@
                 android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="TouchTargetSizeCheck"
-                android:importantForAutofill="no" />
+                tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
 
 
@@ -282,6 +277,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/back"
         app:tint="#289190" />
 
@@ -299,7 +295,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/forgetpass"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/salud_appx48"
         tools:ignore="HardcodedText" />
 
@@ -329,6 +325,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logout"
         app:tint="#FF0000"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -361,8 +358,7 @@
         android:id="@+id/textViewEstudiante"
         android:layout_width="159dp"
         android:layout_height="62dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/estudiante"
         android:textColor="#018685"
@@ -390,4 +386,4 @@
         app:layout_constraintTop_toBottomOf="@+id/btnHistoryEst"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

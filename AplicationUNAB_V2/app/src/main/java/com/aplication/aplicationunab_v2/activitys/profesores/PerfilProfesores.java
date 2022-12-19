@@ -1,14 +1,11 @@
 package com.aplication.aplicationunab_v2.activitys.profesores;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.aplication.aplicationunab_v2.R;
-import com.aplication.aplicationunab_v2.activitys.estudiante.Historial;
-import com.aplication.aplicationunab_v2.activitys.estudiante.PerfilEstudiante;
-import com.aplication.aplicationunab_v2.activitys.estudiante.SintomasEstudiantes;
 import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
 
