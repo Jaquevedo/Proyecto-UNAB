@@ -125,6 +125,11 @@
     <string name="txtGestionAdmin">Selecciona la opción a gestionar:</string>
     <string name="txtCursos">CURSOS</string>
     <string name="ListProfesores">Listado profesores</string>
+    <string name="titulo1">Docentes</string>
+    <string name="tituloEst">Estudiantes</string>
+    <string name="cod">Código</string>
+    <string name="curse">Curso</string>
+    <string name="docentecurse">Docente</string>
 
 
 </resources>
