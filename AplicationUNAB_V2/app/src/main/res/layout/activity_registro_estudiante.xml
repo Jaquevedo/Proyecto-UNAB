@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CAF3F8"
+    android:background="@drawable/u_abc_bcgn"
+    android:backgroundTint="#C5D8DC"
     tools:context=".activitys.registro.RegistroEstudiante">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ImageButt11"
+        app:srcCompat="@drawable/u_abc" />
 
     <ImageView
         android:id="@+id/ImageV2"
@@ -38,7 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageV2" />
+        app:layout_constraintTop_toBottomOf="@+id/ImageV2"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/TextV9"
@@ -48,12 +61,13 @@
         android:fontFamily="@font/comfortaa_light"
         android:text="@string/TextV9"
         android:textAlignment="center"
-        android:textColor="#025756"
+        android:textColor="#018685"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Butt9" />
+        app:layout_constraintTop_toBottomOf="@+id/Butt9"
+        tools:ignore="TextContrastCheck" />
 
     <TableLayout
         android:id="@+id/TablLayout1"
@@ -79,7 +93,7 @@
                 android:padding="10sp"
                 android:text="@string/row1"
                 android:textAlignment="viewStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -94,7 +108,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/azul"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -113,7 +127,7 @@
                 android:padding="10sp"
                 android:text="@string/row2"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -128,7 +142,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/azul"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
         </TableRow>
 
@@ -145,7 +159,7 @@
                 android:padding="10sp"
                 android:text="@string/row3"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -160,7 +174,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/azul"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </TableRow>
@@ -178,7 +192,7 @@
                 android:padding="10sp"
                 android:text="@string/row4"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -193,7 +207,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/azul"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
         </TableRow>
 
@@ -204,16 +218,14 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
         android:text="@string/Butt10"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/ImageButt12"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -244,21 +256,6 @@
         app:srcCompat="@drawable/back"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/ImageButt12"
-        android:layout_width="116dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="6dp"
-        android:backgroundTint="#CAF3F8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ImageButt11"
-        app:layout_constraintTop_toBottomOf="@+id/Butt10"
-        app:layout_constraintVertical_bias="0.857"
-        app:srcCompat="@drawable/u_abc"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="40dp"
@@ -274,12 +271,14 @@
 
     <TextView
         android:id="@+id/textViewEstudiante"
-        android:layout_width="159dp"
+        android:layout_width="210dp"
         android:layout_height="62dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="5dp"
+        android:fontFamily="@font/comfortaa_light"
         android:gravity="center"
-        android:text="@string/estudiante"
+        android:text="@string/textViewEstudiante2"
+        android:textAlignment="center"
         android:textColor="#018685"
         android:textSize="28dp"
         android:textStyle="bold"
