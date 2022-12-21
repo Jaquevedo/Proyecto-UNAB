@@ -79,6 +79,11 @@ public class SintomasProfesores extends AppCompatActivity {
             Log.d("Sintomas", "Contador" + Counter);
 
         }
+        if (Counter >= 3){
+            //Toast.makeText(SintomasProfesores.this, "INHABILITADO", Toast.LENGTH_SHORT).show();
+
+
+        }
 
 
 
