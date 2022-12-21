@@ -82,7 +82,7 @@ public class DetallesEstudiantes_Admin extends AppCompatActivity {
         View.OnClickListener ev = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.collection("Estudiantes").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"pass",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                db.collection("Personas").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"pass",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(DetallesEstudiantes_Admin.this, "Datos Actualizados", Toast.LENGTH_SHORT).show();
@@ -93,7 +93,7 @@ public class DetallesEstudiantes_Admin extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(DetallesEstudiantes_Admin.this, "Hubo un problema con la actualizacion", Toast.LENGTH_SHORT).show();
-                        Log.w("Estudiantes","Error", e);
+                        Log.w("Personas","Error", e);
                     }
                 });
             }
@@ -106,7 +106,7 @@ public class DetallesEstudiantes_Admin extends AppCompatActivity {
                 builder.setMessage("¿Desea eliminar los datos del estudiante?").setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        db.collection("Estudiantes").document(UIDoc.getText().toString()).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        db.collection("Personas").document(UIDoc.getText().toString()).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 Toast.makeText(context, "¡Estudiante eliminado de la base de datos!", Toast.LENGTH_SHORT).show();

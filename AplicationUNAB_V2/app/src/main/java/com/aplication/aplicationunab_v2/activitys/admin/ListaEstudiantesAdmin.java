@@ -41,7 +41,7 @@ public class ListaEstudiantesAdmin extends AppCompatActivity {
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        db.collection("Estudiantes").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()){
@@ -67,7 +67,7 @@ public class ListaEstudiantesAdmin extends AppCompatActivity {
                             it.putExtra("docenteProg",docente.get(reciclerView.getChildAdapterPosition(view)).getPrograma());
                             it.putExtra("docentePass",docente.get(reciclerView.getChildAdapterPosition(view)).getPass());
                             String stat = docente.get(reciclerView.getChildAdapterPosition(view)).getEstado();
-                            if (stat.equals("1")){
+                            if (stat.equals("HABILITADO")){
                                 it.putExtra("docenteEstado", "HABILITADO");
                             }else{
                                 it.putExtra("docenteEstado", "INHABILITADO");

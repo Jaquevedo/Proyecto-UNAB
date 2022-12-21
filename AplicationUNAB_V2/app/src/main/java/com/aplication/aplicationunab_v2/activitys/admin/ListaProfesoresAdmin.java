@@ -37,7 +37,7 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        db.collection("Docentes").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 
 
             @Override
@@ -45,7 +45,7 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()){
                         Log.d("MainActivity", document.getId()+" => "+document.getData());
-                        docentes namedocente = new docentes(document.getId(),document.getString("nombre"),document.getString("doc"),document.getString("email"),document.getString("estado"), document.getString("programa"), document.getString("pass"));
+                        docentes namedocente = new docentes(document.getId(),document.getString("nombre"),document.getString("doc"),document.getString("email"),document.getString("estado"), document.getString("programa"), document.getString("contraseña"));
                         docente.add(namedocente);
 
 
@@ -65,7 +65,7 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
                             it.putExtra("docenteProg",docente.get(reciclerView.getChildAdapterPosition(view)).getPrograma());
                             it.putExtra("docentePass",docente.get(reciclerView.getChildAdapterPosition(view)).getPass());
                             String stat = docente.get(reciclerView.getChildAdapterPosition(view)).getEstado();
-                            if (stat.equals("1")){
+                            if (stat.equals("HABILITADO")){
                                 it.putExtra("docenteEstado", "HABILITADO");
                             }else{
                                 it.putExtra("docenteEstado", "INHABILITADO");

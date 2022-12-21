@@ -78,12 +78,12 @@ public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
 
 
 
-            Log.d("Docentes", Id);
+            Log.d("Personas", Id);
         }
         View.OnClickListener ev = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.collection("Docentes").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"pass",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                db.collection("Personas").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"contraseña",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(DetallesProfesEstudiantes_Admin.this, "Datos Actualizados", Toast.LENGTH_SHORT).show();
@@ -94,7 +94,7 @@ public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(DetallesProfesEstudiantes_Admin.this, "Hubo un problema con la actualizacion", Toast.LENGTH_SHORT).show();
-                        Log.w("Docentes","Error", e);
+                        Log.w("Personas","Error", e);
                     }
                 });
             }
