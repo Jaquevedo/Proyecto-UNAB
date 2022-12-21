@@ -43,6 +43,8 @@ public class DetallesCursoAdmin extends AppCompatActivity {
         jueves = findViewById(R.id.jueveHorario);
         viernes = findViewById(R.id.viernesHorario);
         sabado = findViewById(R.id.sabadoHorario);
+        btnAct=findViewById(R.id.btnUpdateEst);
+        btnBorr=findViewById(R.id.btndeleteEst);
         context = getApplicationContext();
 
 
@@ -79,30 +81,61 @@ public class DetallesCursoAdmin extends AppCompatActivity {
 
         }
 
-//        View.OnClickListener EV = new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                db.collection("Cursos").document(UIDoc.getText().toString()).update("nombre",nameDocurse.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        Toast.makeText(DetallesCursoAdmin.this, "Data updated", Toast.LENGTH_SHORT).show();
-//                        Intent int1 = new Intent(DetallesCursoAdmin.this, ListaCursosAdmin.class);
-//                        startActivity(int1);
-//                    }
-//                }).addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        Toast.makeText(DetallesCursoAdmin.this, "CANT UPDATE", Toast.LENGTH_SHORT).show();
-//                        Log.w("Cursos", "Error", e);
-//                    }
-//                });
-//
-//            }
-//        };
-//        btnAct.setOnClickListener(EV);
+        View.OnClickListener EV = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                db.collection("Cursos").document(UIDoc.getText().toString()).update("nombre",nameDocurse.getText().toString(), "codigo", codCurse.getText().toString(), "lunes", lunes.getText().toString(),"martes", martes.getText().toString(), "miercoles",miercoles.getText().toString(),"jueves", jueves.getText().toString(),"viernes", viernes.getText().toString(), "sabado", sabado.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(DetallesCursoAdmin.this, "Data updated", Toast.LENGTH_SHORT).show();
+                        Intent int1 = new Intent(DetallesCursoAdmin.this, ListaCursosAdmin.class);
+                        startActivity(int1);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(DetallesCursoAdmin.this, "CANT UPDATE", Toast.LENGTH_SHORT).show();
+                        Log.w("Cursos", "Error", e);
+                    }
+                });
+
+            }
+        };
+        btnAct.setOnClickListener(EV);
+        btnBorr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetallesCursoAdmin.this);
+                builder.setMessage("¿Desea eliminar el curso?").setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        db.collection("Cursos").document(UIDoc.getText().toString()).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(context, "¡Curso eliminado de la base de datos!", Toast.LENGTH_SHORT).show();
+                                Intent it = new Intent(context, ListaEstudiantesAdmin.class);
+                                startActivity(it);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w("est","Error "+ e);
+                            }
+                        });
+                    }
+                }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(context, "Cancelado", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.create().show();
+            }
+        });
 
 
-   }
+
+    }
 
 
 

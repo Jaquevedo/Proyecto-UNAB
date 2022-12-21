@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/u_abc_bcgn"
+    android:backgroundTint="#C5D8DC"
     tools:context=".activitys.admin.PerfilAdmin">
 
     <TextView
@@ -23,9 +25,10 @@
 
     <TextView
         android:id="@+id/textViewEstudiante"
-        android:layout_width="200dp"
+        android:layout_width="240dp"
         android:layout_height="62dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa_light"
         android:gravity="center"
         android:text="@string/txtAdmin"
         android:textColor="#018685"
@@ -62,7 +65,7 @@
         android:onClick="viewOption"
         android:text="@string/Butt1"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextV3" />
@@ -78,7 +81,7 @@
         android:onClick="viewOption"
         android:text="@string/Butt2"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGestionProfes"
@@ -96,7 +99,7 @@
         android:text="@string/txtCursos"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,10 +159,12 @@
         android:layout_height="36dp"
         android:layout_marginTop="20dp"
         android:clickable="true"
+        android:fontFamily="@font/comfortaa_light"
         android:gravity="center"
         android:onClick="viewOption"
         android:text="@string/changePass"
         android:textColor="#E53935"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

@@ -84,7 +84,7 @@
     <string name="fecha">Fecha</string>
     <string name="Hora">Hora</string>
     <string name="respuestas">Respuestas</string>
-    <string name="history">Historial</string>
+    <string name="history">HISTORIAL</string>
     <string name="horario">Horario</string>
     <string name="asignatura">Asignatura</string>
     <string name="curso">Curso</string>
@@ -125,12 +125,64 @@
     <string name="txtGestionAdmin">Selecciona la opción a gestionar:</string>
     <string name="txtCursos">CURSOS</string>
     <string name="ListProfesores">Listado profesores</string>
+    <string name="todo2">TODO4</string>
+    <string name="todo1">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="todo5">TODO</string>
+    <string name="textViewEstudiante">Estudiante</string>
+    <string name="textViewEstudiante1">Estudiante</string>
+    <string name="textViewEstudiante2">Estudiante</string>
+    <string name="TextVListEstCurs">Listado de Estudiantes</string>
+    <string name="todo6">TODO</string>
+    <string name="todo7">TODO</string>
+    <string name="ver_detalle">Ver detalle</string>
+    <string name="todo9">TODO</string>
+    <string name="todo10">TODO</string>
+    <string name="todo11">TODO</string>
+    <string name="todo12">TODO</string>
+    <string name="habilitado">Habilitado</string>
+    <string name="ver_detalle2">Ver detalle</string>
+    <string name="todo13">TODO</string>
+    <string name="todo14">TODO</string>
+    <string name="todo15">TODO</string>
+    <string name="todo16">TODO</string>
+    <string name="todo17">TODO</string>
+    <string name="todo18">TODO</string>
+    <string name="todo19">TODO</string>
+    <string name="todo20">TODO</string>
+    <string name="ver_detalle20">Ver detalle</string>
+    <string name="ver_detalle21">Ver detalle</string>
+    <string name="habilitado15">Habilitado</string>
+    <string name="ver_detalle15">Ver detalle</string>
+    <string name="todo30">TODO</string>
+    <string name="todo31">TODO</string>
+    <string name="todo33">TODO</string>
+    <string name="ver_detalle30">Ver detalle</string>
+    <string name="todo34">TODO</string>
+    <string name="todo35">TODO</string>
+    <string name="habilitado28">Habilitado</string>
+    <string name="ver_detalle29">Ver detalle</string>
+
+
+    <string name="TextVRegSintomas">Síntomatología</string>
+    <string name="TextVPreg1Sint">PREGUNTA 1: ¿Tiene dificultad repentina para respirar o nota falta de aire?</string>
+    <string name="RadioBttnSi1">SÍ</string>
+    <string name="RadioBttnnNo1">No</string>
+    <string name="TextVPreg2Sint">PREGUNTA 2: ¿Presenta fiebre de más de 37,7 grados centígrados?</string>
+    <string name="TextVPreg3Sint">PREGUNTA 3: ¿Presenta dolor de garganta y congestión nasal?</string>
+    <string name="TextVPreg4Sint">PREGUNTA 4: ¿Presenta dolor de cabeza significativamente importante?</string>
+    <string name="TextVPreg5Sint">PREGUNTA 5: ¿Presenta tos persistentemente?</string>
+    <string name="BttnRegitSintom">REGISTRAR SÍNTOMAS</string>
+    <string name="todo50">TODO</string>
+    <string name="todo51">TODO</string>
+    <string name="todo60">TODO</string>
+
     <string name="titulo1">Docentes</string>
     <string name="tituloEst">Estudiantes</string>
     <string name="cod">Código</string>
     <string name="curse">Curso</string>
     <string name="docentecurse">Docente</string>
     <string name="contrasena">Contraseña</string>
-
 
 </resources>

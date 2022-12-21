@@ -4,15 +4,312 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/u_abc_bcgn"
+    android:backgroundTint="#C5D8DC"
     tools:context=".activitys.profesores.SintomasProfesores">
 
-    <TextView
-        android:id="@+id/textView7"
+    <ImageButton
+        android:id="@+id/BttnVolvSintomProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sintomas profesores"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/todo60"
+        android:onClick="viewOption"
+        android:tint="#018685"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/BttnSalirSintomP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="TODO"
+        android:onClick="viewOption"
+        android:tint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/TextVRegSintomasProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVRegSintomas"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextVPreg1SintProf"
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVPreg1Sint"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/RadioBttnNo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVRegSintomasProf" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnSi1Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnSi1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg1SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/TextVRegSintomasProf"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnNo1Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnnNo1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnSi1Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/TextVPreg2SintProf"
+        android:layout_width="270dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVPreg2Sint"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg1SintProf" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnSi2Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnSi1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg2SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnNo1Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnNo2Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnnNo1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnSi2Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/TextVPreg3SintProf"
+        android:layout_width="270dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVPreg3Sint"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg2SintProf" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnSi3Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnSi1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg3SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnNo2Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnNo3Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnnNo1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg3SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnSi3Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/TextVPreg4SintProf"
+        android:layout_width="270dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVPreg4Sint"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg3SintProf" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnSi4Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnSi1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg4SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnNo3Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnNo4Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnnNo1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnSi4Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/TextVPreg5SintProf"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/TextVPreg5Sint"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg4SintProf" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnSi5Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnSi1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/TextVPreg5SintProf"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnNo4Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <RadioButton
+        android:id="@+id/RadioBttnNo5Prof"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/RadioBttnnNo1"
+        android:textColor="#0C8F8E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBttnSi5Prof"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/bttnRegitSintom"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttons_styles2"
+        android:backgroundTint="#018584"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/BttnRegitSintom"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg5SintProf" />
+
+    <ImageView
+        android:id="@+id/imgABCRSP"
+        android:layout_width="65dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/ImgDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/u_abc" />
+
+    <ImageView
+        android:id="@+id/BttLogoRSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="logosalud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/salud_appx48"
+        tools:ignore="HardcodedText,ImageContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

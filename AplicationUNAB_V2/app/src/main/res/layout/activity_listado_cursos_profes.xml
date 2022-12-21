@@ -4,47 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/u_abc_bcgn"
+    android:backgroundTint="#C5D8DC"
     tools:context=".activitys.profesores.ListadoCursosProfes">
-
-    <ImageButton
-        android:id="@+id/btnNext1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#00FFFFFF"
-        android:onClick="viewOption"
-        android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/EstDetails"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="0.15"
-        app:srcCompat="@drawable/back"
-        app:tint="#098900"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/ButtonBack4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#00FFFFFF"
-        android:onClick="viewOption"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/EstDetails"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="0.139"
-        app:srcCompat="@drawable/back"
-        app:tint="#003FFF"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
@@ -71,6 +33,7 @@
                 android:id="@+id/STATE"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="12dp"
                 android:text="@string/horario"
                 android:textColor="#FFFFFF"
@@ -78,12 +41,14 @@
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/namecom"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="12dp"
                 android:text="@string/asignatura"
                 android:textColor="#FFFFFF"
@@ -91,12 +56,14 @@
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/docid"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="12dp"
                 android:text="@string/curso"
                 android:textColor="#FFFFFF"
@@ -104,12 +71,14 @@
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/select2"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="12dp"
                 android:text="@string/select"
                 android:textColor="#FFFFFF"
@@ -117,7 +86,8 @@
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
         </TableRow>
 
@@ -132,43 +102,49 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/horariostatic"
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                android:textSize="10sp"
+                android:textStyle="normal"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/rowA1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="center_vertical|fill_vertical"
                 android:padding="10dp"
                 android:text="@string/asigStatic"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="10sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/TextVRegSintomas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="center|center_horizontal|fill_vertical"
                 android:padding="10dp"
                 android:text="@string/cursoStatic"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="10sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <CheckBox
                 android:id="@+id/checkBox8"
@@ -177,7 +153,7 @@
                 android:backgroundTint="#FF0808"
                 android:buttonTint="#000000"
                 android:textColorLink="#4DBCBB"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         </TableRow>
 
@@ -193,14 +169,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:background="#4DBFBE"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
@@ -208,11 +185,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#4DBEBD"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -220,14 +198,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBFBE"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -250,11 +229,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:background="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -262,14 +242,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
@@ -277,11 +258,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#9AE1E1"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <CheckBox
@@ -310,25 +292,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -336,14 +320,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -366,25 +351,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#98DFDF"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#98DFDF"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -392,14 +379,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#98DFDF"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -422,25 +410,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -448,14 +438,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -478,25 +469,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#98DFDF"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#97DEDE"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -504,14 +497,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#96DDDD"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -534,25 +528,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -560,14 +556,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
+                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text=""
-                android:textColor="#024545"
+                android:textColor="@color/white"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="10sp"
                 android:textStyle="normal" />
 
             <CheckBox
@@ -592,12 +589,15 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
+        android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
-        android:text="Ver detalle"
+        android:text="@string/ver_detalle30"
+        android:textColor="@color/white"
+
+
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
         app:layout_constraintVertical_bias="0.159" />
@@ -606,22 +606,23 @@
         android:id="@+id/btcatrasEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/todo34"
         android:onClick="viewOption"
         android:tint="#018685"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageButton
         android:id="@+id/btnHistLogEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         android:backgroundTint="#00FFFFFF"
         android:onClick="viewOption"
         android:tint="#FF0000"
@@ -643,7 +644,9 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/EstDetails"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/salud_appx48" />
+        app:srcCompat="@drawable/salud_appx48"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todo35" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -654,20 +657,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonBack4"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/u_abc" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="237dp"
         android:layout_height="43dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
         android:text="@string/ListCursos"
         android:textColor="#018685"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/btnHistLogEst"
+        app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toEndOf="@+id/btcatrasEst"
         app:layout_constraintTop_toTopOf="parent" />
 
