@@ -102,11 +102,7 @@
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/doc"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
@@ -124,11 +120,7 @@
                 android:inputType="number"
                 android:padding="10dp"
                 android:text="@string/documentoData"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="@color/black"
                 android:textColorLink="@color/black"
@@ -153,11 +145,7 @@
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/nombre"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
@@ -174,11 +162,7 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="10dp"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/purple_200"
                 android:textSize="14sp"
@@ -201,11 +185,7 @@
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/programa"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
@@ -223,11 +203,7 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="10dp"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="14sp"
@@ -256,11 +232,7 @@
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/email"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
@@ -279,11 +251,7 @@
                 android:inputType="textWebEmailAddress"
                 android:padding="10dp"
                 android:text="@string/emailData"
-<<<<<<< HEAD
                 android:textColor="@color/black"
-=======
-                android:textColor="@color/white"
->>>>>>> Main
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="12sp"
