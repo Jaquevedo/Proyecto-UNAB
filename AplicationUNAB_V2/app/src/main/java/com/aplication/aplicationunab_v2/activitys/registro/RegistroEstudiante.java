@@ -101,7 +101,7 @@ public class RegistroEstudiante extends AppCompatActivity {
                         e.put("doc", c3);
                         e.put("programa", c4);
                         e.put("contraseña", c5);
-                        e.put("estado", "Habilitado");
+                        e.put("estado", "HABILITADO");
                         e.put("rol","Estudiante");
 
                         db.collection("Personas").add(e).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {

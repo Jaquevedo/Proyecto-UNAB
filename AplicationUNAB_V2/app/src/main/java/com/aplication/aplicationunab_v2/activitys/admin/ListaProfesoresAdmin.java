@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aplication.aplicationunab_v2.R;
 import com.aplication.aplicationunab_v2.adapters.adapter;
-import com.aplication.aplicationunab_v2.models.docentes;
+import com.aplication.aplicationunab_v2.models.Persona;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,7 +33,7 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_docentes);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        List<docentes> docente = new ArrayList<docentes>();
+        List<Persona> docentes = new ArrayList<Persona>();
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -45,26 +45,35 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()){
                         Log.d("MainActivity", document.getId()+" => "+document.getData());
-                        docentes namedocente = new docentes(document.getId(),document.getString("nombre"),document.getString("doc"),document.getString("email"),document.getString("estado"), document.getString("programa"), document.getString("contraseña"));
-                        docente.add(namedocente);
 
-
+                        if(document.getString("rol").contentEquals("Docente")){
+                            Persona docente = new Persona(
+                                    document.getId(),
+                                    document.getString("email"),
+                                    document.getString("nombre"),
+                                    document.getString("doc"),
+                                    document.getString("programa"),
+                                    document.getString("contraseña"),
+                                    document.getString("estado"),
+                                    document.getString("rol"));
+                            docentes.add(docente);
+                        }
 
                     }
-                    adapter = new adapter(getApplicationContext(),docente);
+                    adapter = new adapter(getApplicationContext(), docentes);
                     adapter.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Log.d("MainActivity", "Presionado: "+docente.get(reciclerView.getChildAdapterPosition(view)).getNombre());
+                            Log.d("MainActivity", "Presionado: "+ docentes.get(reciclerView.getChildAdapterPosition(view)).getNombres());
                             it =new Intent(context, DetallesProfesEstudiantes_Admin.class);
 
-                            it.putExtra("docenteId",docente.get(reciclerView.getChildAdapterPosition(view)).getUID());
-                            it.putExtra("docenteName",docente.get(reciclerView.getChildAdapterPosition(view)).getNombre());
-                            it.putExtra("docenteDoc",docente.get(reciclerView.getChildAdapterPosition(view)).getDoc());
-                            it.putExtra("docenteEmail",docente.get(reciclerView.getChildAdapterPosition(view)).getEmail());
-                            it.putExtra("docenteProg",docente.get(reciclerView.getChildAdapterPosition(view)).getPrograma());
-                            it.putExtra("docentePass",docente.get(reciclerView.getChildAdapterPosition(view)).getPass());
-                            String stat = docente.get(reciclerView.getChildAdapterPosition(view)).getEstado();
+                            it.putExtra("docenteId",docentes.get(reciclerView.getChildAdapterPosition(view)).getuId());
+                            it.putExtra("docenteName",docentes.get(reciclerView.getChildAdapterPosition(view)).getNombres());
+                            it.putExtra("docenteDoc",docentes.get(reciclerView.getChildAdapterPosition(view)).getDocumento());
+                            it.putExtra("docenteEmail",docentes.get(reciclerView.getChildAdapterPosition(view)).getEmail());
+                            it.putExtra("docenteProg",docentes.get(reciclerView.getChildAdapterPosition(view)).getPrograma());
+                            it.putExtra("docentePass",docentes.get(reciclerView.getChildAdapterPosition(view)).getPassword());
+                            String stat = docentes.get(reciclerView.getChildAdapterPosition(view)).getEstado();
                             if (stat.equals("HABILITADO")){
                                 it.putExtra("docenteEstado", "HABILITADO");
                             }else{
