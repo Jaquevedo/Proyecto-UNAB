@@ -1,20 +1,84 @@
 package com.aplication.aplicationunab_v2.activitys.profesores;
 
 import android.content.Intent;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aplication.aplicationunab_v2.R;
+import com.aplication.aplicationunab_v2.activitys.estudiante.PerfilEstudiante;
 import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PerfilProfesores extends AppCompatActivity {
+
+    TextView estado;
+    TextView documento;
+    TextView nombre;
+    TextView programa;
+    TextView email;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_profesores);
+
+        estado = findViewById(R.id.txtEstado);
+        documento = findViewById(R.id.docData);
+        nombre = findViewById(R.id.nameData);
+        programa = findViewById(R.id.lunesHorario);
+        email = findViewById(R.id.martesHorario);
+        String idLoginUser = "";
+
+        limpiarTextos();
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            idLoginUser = bundle.getString("idProfe");
+        }
+
+        db.collection("Personas").document(idLoginUser).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                nombre.setText(task.getResult().getString("nombre"));
+                documento.setText(task.getResult().getString("doc"));
+                email.setText(task.getResult().getString("email"));
+                programa.setText(task.getResult().getString("programa"));
+                if (task.getResult().getString("estado").equals("INHABILITADO")){
+                    estado.setText(task.getResult().getString("estado"));
+                    estado.setTextColor(getResources().getColor(R.color.rojo));
+                }else{
+                    estado.setText(task.getResult().getString("estado"));
+                    estado.setTextColor(getResources().getColor(R.color.verde_limon));
+
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(PerfilProfesores.this, "Hubo un problema con la actualizacion", Toast.LENGTH_SHORT).show();
+                Log.w("Personas", "Error", e);
+            }
+        });
+    }
+
+    private void limpiarTextos() {
+        estado.setText("");
+        documento.setText("");
+        nombre.setText("");
+        programa.setText("");
+        email.setText("");
     }
 
     public void viewOption(View view) {

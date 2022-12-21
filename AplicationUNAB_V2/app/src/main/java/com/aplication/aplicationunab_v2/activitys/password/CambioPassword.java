@@ -3,13 +3,19 @@ package com.aplication.aplicationunab_v2.activitys.password;
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.aplication.aplicationunab_v2.R;
 
 public class CambioPassword extends AppCompatActivity {
+
+    EditText actualPass;
+    EditText newPass;
+    EditText confirmNewPass;
 
     Button btnCambiarPass;
 
@@ -18,13 +24,17 @@ public class CambioPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cambio_password);
 
+        actualPass = findViewById(R.id.InActualPass);
+        newPass = findViewById(R.id.InNewPass);
+        confirmNewPass = findViewById(R.id.ConfirmPw);
+
         btnCambiarPass = findViewById(R.id.BtnConfirmar);
         btnCambiarPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validacion()) {
                     // TODO: hacer solicitud
-                    Intent intentRestaurar=new Intent(CambioPassword.this, FinCambioPassword.class);
+                    Intent intentRestaurar = new Intent(CambioPassword.this, FinCambioPassword.class);
                     startActivity(intentRestaurar);
                 }
             }
