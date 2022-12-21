@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="viewOption"
     tools:context=".activitys.admin.DetallesCursoAdmin">
 
     <TableLayout
@@ -11,11 +12,11 @@
         android:layout_width="360dp"
         android:layout_height="400dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="23dp"
         android:background="#A675B39A"
         android:stretchColumns="1"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/btnUpdateEst"
+        app:layout_constraintBottom_toTopOf="@+id/btndeleteEst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/nameCurse"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="20dp"
@@ -101,7 +103,7 @@
             <TextView
                 android:id="@+id/nombre"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:background="#4DBFBE"
                 android:gravity="bottom"
                 android:padding="10dp"
@@ -152,7 +154,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/progData"
+                android:id="@+id/lunesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#9AE1E1"
@@ -194,7 +196,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/emailData"
+                android:id="@+id/martesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
@@ -230,7 +232,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/miercolesrta"
+                android:id="@+id/miercolesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#9AE1E1"
@@ -272,7 +274,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/juevesrta"
+                android:id="@+id/jueveHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
@@ -308,7 +310,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/viernesrta"
+                android:id="@+id/viernesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#9AE1E1"
@@ -350,7 +352,7 @@
                 android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/sabadorta"
+                android:id="@+id/sabadoHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
@@ -371,15 +373,13 @@
         android:id="@+id/btndeleteEst"
         android:layout_width="231dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginTop="23dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
         android:onClick="viewOption"
         android:text="@string/btnDelete"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
@@ -387,30 +387,28 @@
         android:id="@+id/btnUpdateEst"
         android:layout_width="231dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="84dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
         android:onClick="viewOption"
         android:text="@string/btnUpdate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/btndeleteEst" />
 
     <ImageButton
         android:id="@+id/btnBackEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#CAF3F8"
+        android:backgroundTint="#F9F9F9"
         android:contentDescription="@string/back"
         android:onClick="viewOption"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/back"
         app:tint="#289190" />
 
@@ -418,16 +416,11 @@
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="10dp"
         android:contentDescription="logosalud"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/salud_appx48"
         tools:ignore="HardcodedText" />
 
@@ -435,16 +428,14 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="268dp"
         android:background="#CAF3F8"
-        android:backgroundTint="#CAF3F8"
+        android:backgroundTint="#F9F9F9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnLogout"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnUpdateEst"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/u_abc"
         tools:ignore="ContentDescription" />
 
@@ -454,15 +445,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#CAF3F8"
+        android:backgroundTint="#F9F9F9"
         android:onClick="viewOption"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/logout"
         app:tint="#FF0000"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/CUID"
+        android:layout_width="141dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/btnBackEst"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

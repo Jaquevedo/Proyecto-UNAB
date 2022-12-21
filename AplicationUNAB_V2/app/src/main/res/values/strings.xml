@@ -130,6 +130,7 @@
     <string name="cod">Código</string>
     <string name="curse">Curso</string>
     <string name="docentecurse">Docente</string>
+    <string name="contrasena">Contraseña</string>
 
 
 </resources>

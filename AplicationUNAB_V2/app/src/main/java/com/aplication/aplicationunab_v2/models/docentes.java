@@ -9,12 +9,14 @@ public class docentes {
     private String pass;
     private String estado;
 
-    public docentes(String UID, String nombre, String doc, String email, String estado) {
+    public docentes(String UID, String nombre, String doc, String email, String estado, String programa, String pass) {
         this.UID = UID;
         this.nombre = nombre;
         this.doc = doc;
         this.email = email;
         this.estado = estado;
+        this.programa = programa;
+        this.pass = pass;
     }
 
     public String getEstado() {
