@@ -2,40 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/listEst2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/u_abc_bcgn"
-    android:backgroundTint="#C5D8DC"
+    android:id="@+id/idDoc"
     tools:context=".activitys.admin.DetallesProfesEstudiantes_Admin">
-
-    <ImageView
-        android:id="@+id/btnLogout2"
-        android:layout_width="65dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="logosalud"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/salud_appx48"
-        tools:ignore="HardcodedText,ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/btnBack2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/todo1"
-        android:onClick="viewOption"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/btnBack"
@@ -78,7 +48,6 @@
                 android:id="@+id/STATE"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:fontFamily="@font/comfortaa_light"
                 android:padding="20dp"
                 android:text="@string/estado"
                 android:textColor="#FFFFFF"
@@ -89,13 +58,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:fontFamily="@font/comfortaa_light"
+                android:id="@+id/statusDoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#018685"
                 android:padding="20dp"
                 android:text="@string/acceso"
                 android:textColor="#FFFFFF"
-                android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -113,35 +82,30 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#99E0E0"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/doc"
-                android:textColor="@color/white"
+                android:textColor="#024545"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:ignore="TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/docData"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#99E0E0"
-                android:fontFamily="@font/comfortaa_light"
-                android:importantForAutofill="no"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="10dp"
                 android:text="@string/documentoData"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="@color/black"
                 android:textColorLink="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
                 tools:text="@string/documentoData" />
         </TableRow>
 
@@ -156,33 +120,30 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBFBE"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/nombre"
-                android:textColor="@color/white"
+                android:textColor="#024545"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:ignore="TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/nameData"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:background="#4DBEBD"
-                android:fontFamily="@font/comfortaa_light"
-                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="10dp"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/purple_200"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="normal"
-                tools:ignore="TextViewEdits,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                tools:ignore="TextViewEdits" />
+
         </TableRow>
 
         <TableRow
@@ -196,35 +157,30 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#99E0E0"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/programa"
-                android:textColor="@color/white"
+                android:textColor="#024545"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:ignore="TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/progData"
+                android:id="@+id/lunesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
-                android:autofillHints=""
                 android:background="#9AE1E1"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:inputType="text"
                 android:padding="10dp"
                 android:text="@string/progData"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
         </TableRow>
 
         <TableRow
@@ -238,35 +194,73 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
                 android:padding="10dp"
                 android:text="@string/email"
-                android:textColor="@color/white"
+                android:textColor="#024545"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorHint="#00B3EA"
                 android:textColorLink="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:ignore="TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <EditText
-                android:id="@+id/emailData"
+                android:id="@+id/martesHorario"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#4DBDBC"
-                android:fontFamily="@font/comfortaa_light"
                 android:gravity="bottom"
-                android:importantForAutofill="no"
                 android:inputType="textWebEmailAddress"
                 android:padding="10dp"
                 android:text="@string/emailData"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:textColorHighlight="@color/purple_200"
                 android:textColorLink="@color/white"
-                android:textSize="12sp"
-                android:textStyle="normal"
-                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@color/teal_700" />
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/pass"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#98DFDF"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:text="@string/contrasena"
+                android:textColor="#024545"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorHint="#00B3EA"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/passData"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#98DFDF"
+                android:gravity="bottom"
+                android:inputType="textWebPassword"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textColorHighlight="@color/purple_200"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal|bold"
+                />
         </TableRow>
 
 
@@ -275,85 +269,124 @@
     <Button
         android:id="@+id/btnUpdateEst"
         android:layout_width="231dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="2dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
-        android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
         android:text="@string/btnUpdate"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnHistoryEst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnHistoryEst"
 
         android:layout_width="231dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
-        android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
         android:text="@string/btnHistory"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btndeleteEst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdateEst"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateEst" />
 
     <Button
         android:id="@+id/btndeleteEst"
         android:layout_width="231dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018685"
-        android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
         android:text="@string/btnDelete"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHistoryEst"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/btnHistoryEst" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CAF3F8"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btndeleteEst"
+        app:layout_constraintVertical_bias="0.111"
+        app:srcCompat="@drawable/u_abc"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/btnLogoutEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="166dp"
+        android:backgroundTint="#FFFFFF"
         android:onClick="viewOption"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logout"
         app:tint="#FF0000"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView7"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/todo4"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnLogoutEst"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogoutEst" />
+
+    <ImageView
+        android:id="@+id/BackListDoc"
+        android:layout_width="46dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:onClick="viewOption"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btndeleteEst"
-        app:srcCompat="@drawable/u_abc" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackListDoc" />
+
+    <EditText
+        android:id="@+id/uidt"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/BackListDoc"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

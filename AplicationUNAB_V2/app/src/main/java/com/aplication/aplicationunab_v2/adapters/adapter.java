@@ -47,7 +47,7 @@ public class adapter extends RecyclerView.Adapter<MyViewHolder> implements View.
     {
         int ico;
         String hab= items.get(position).getEstado();
-        if (hab.equals("0")){
+        if (hab.equals("INHABILITADO")){
             //holder.checkView.setImageResource(R.drawable.inhabilitado);
             Log.d("adapter", hab+" estate");
             ico = R.drawable.inhabilitado;

@@ -49,6 +49,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".activitys.admin.DetallesEstudiantes_Admin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activitys.admin.ListaProfesoresAdmin"
             android:exported="false">
             <meta-data
