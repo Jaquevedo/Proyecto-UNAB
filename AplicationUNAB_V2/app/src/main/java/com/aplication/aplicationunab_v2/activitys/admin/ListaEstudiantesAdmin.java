@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aplication.aplicationunab_v2.R;
 import com.aplication.aplicationunab_v2.adapters.adapter;
-import com.aplication.aplicationunab_v2.models.docentes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -28,7 +27,7 @@ public class ListaEstudiantesAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_estudiantes);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        List<docentes> docente = new ArrayList<docentes>();
+        //List<docentes> docente = new ArrayList<docentes>();
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -38,14 +37,14 @@ public class ListaEstudiantesAdmin extends AppCompatActivity {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()){
                         Log.d("MainActivity", document.getId()+" => "+document.getData());
-                        docentes namedocente = new docentes(document.getId(),document.getString("nombre"),document.getString("doc"),document.getString("email"),document.getString("estado"));
-                        docente.add(namedocente);
+                        //docentes namedocente = new docentes(document.getId(),document.getString("nombre"),document.getString("doc"),document.getString("email"),document.getString("estado"));
+                        //docente.add(namedocente);
 
 
 
                     }
-                    adapter = new adapter(getApplicationContext(),docente);
-                    reciclerView.setAdapter(adapter);
+                    //adapter = new adapter(getApplicationContext(),docente);
+                    //reciclerView.setAdapter(adapter);
                 }else{
                     Log.w("MainActivity", "NO SE CARGÓ EL DOC.",task.getException());
                 }

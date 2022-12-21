@@ -183,5 +183,6 @@
     <string name="cod">Código</string>
     <string name="curse">Curso</string>
     <string name="docentecurse">Docente</string>
+    <string name="txtCorreo">Correo:</string>
 
 </resources>

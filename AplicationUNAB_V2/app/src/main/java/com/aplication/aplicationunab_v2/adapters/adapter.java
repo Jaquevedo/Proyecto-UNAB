@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aplication.aplicationunab_v2.R;
-import com.aplication.aplicationunab_v2.models.docentes;
+import com.aplication.aplicationunab_v2.models.Docentes;
 
 import java.util.List;
 
 public class adapter extends RecyclerView.Adapter<MyViewHolder> implements View.OnClickListener {
     Context context;
-    List<docentes> items;
+    List<Docentes> items;
     View.OnClickListener listener;
 
-    public adapter(Context context, List<docentes> items) {
+    public adapter(Context context, List<Docentes> items) {
         this.context = context;
         this.items = items;
     }

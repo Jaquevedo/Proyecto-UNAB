@@ -4,17 +4,39 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.aplication.aplicationunab_v2.R;
 import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
+import com.aplication.aplicationunab_v2.models.Persona;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PerfilEstudiante extends AppCompatActivity {
+
+    TextView estado;
+    TextView documento;
+    TextView nombre;
+    TextView programa;
+    TextView email;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    Persona estudiante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_estudiante);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            String idLoginUser = bundle.getString("idEstudiante");
+        }
     }
 
     public void viewOption(View view) {

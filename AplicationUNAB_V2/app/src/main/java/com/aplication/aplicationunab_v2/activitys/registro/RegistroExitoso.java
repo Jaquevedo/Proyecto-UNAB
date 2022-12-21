@@ -1,8 +1,11 @@
 package com.aplication.aplicationunab_v2.activitys.registro;
 
 import android.content.Intent;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -10,9 +13,15 @@ import android.widget.Toast;
 import com.aplication.aplicationunab_v2.R;
 import com.aplication.aplicationunab_v2.activitys.admin.PerfilAdmin;
 import com.aplication.aplicationunab_v2.activitys.estudiante.PerfilEstudiante;
+import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.aplication.aplicationunab_v2.activitys.password.RestaurarPassword;
 import com.aplication.aplicationunab_v2.activitys.profesores.PerfilProfesores;
 import com.aplication.aplicationunab_v2.models.Persona;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +30,8 @@ public class RegistroExitoso extends AppCompatActivity {
 
     EditText user, password;
 
-    //Todo: Datos provisionales
-    Persona estudiante;
-    Persona profesor;
-    Persona admin;
-    List<Persona> items = new ArrayList<>();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    List<Persona> personas = new ArrayList<Persona>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +40,30 @@ public class RegistroExitoso extends AppCompatActivity {
 
         user = findViewById(R.id.EditTextUsuario);
         password = findViewById(R.id.EditTextPassword);
+        limpiarCampos();
 
-        //Todo: traer esta informacion dela DB, DATOS PROVISIONALES
-        estudiante = new Persona("1", "ja", "Juan Angel", "Quevedo", "N/A","1234","estudiante");
-        profesor = new Persona("2", "ma","Miguel Angel", "Rodriguez", "N/A","1234","profesor");
-        admin = new Persona("3", "s", "Samuel", "Perez", "N/A","1234","admin");
-
-        items.add(estudiante);
-        items.add(profesor);
-        items.add(admin);
+        db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d("MainActivity", document.getId() + " => " + document.getData());
+                        Persona persona = new Persona(
+                                document.getId(),
+                                document.getString("email"),
+                                document.getString("nombre"),
+                                document.getString("doc"),
+                                document.getString("programa"),
+                                document.getString("contraseña"),
+                                document.getString("estado"),
+                                document.getString("rol"));
+                        personas.add(persona);
+                    }
+                } else {
+                    Log.w("RegistroEstudiante", "NO SE CARGÓ EL DOC.", task.getException());
+                }
+            }
+        });
     }
 
     public void viewLogin(View view) {
@@ -54,21 +75,21 @@ public class RegistroExitoso extends AppCompatActivity {
 
                     boolean ingreso = false;
 
-                    for (Persona p: items) {
-                        if (p.getUser().contentEquals(user.getText().toString()) && p.getPassword().contentEquals(password.getText().toString())){
+                    for (Persona p: personas) {
+                        if (p.getEmail().contentEquals(user.getText().toString()) && p.getPassword().contentEquals(password.getText().toString())){
                             ingreso = true;
                             switch (p.getRol()) {
-                                case "estudiante":
+                                case "Estudiante":
                                     Intent intentEstu = new Intent(RegistroExitoso.this, PerfilEstudiante.class);
                                     startActivity(intentEstu);
                                     Toast.makeText(this, "Estudiantes", Toast.LENGTH_SHORT).show();
                                     break;
-                                case "profesor":
+                                case "Docente":
                                     Intent intentProf = new Intent(RegistroExitoso.this, PerfilProfesores.class);
                                     startActivity(intentProf);
                                     Toast.makeText(this, "Profesores", Toast.LENGTH_SHORT).show();
                                     break;
-                                case "admin":
+                                case "Administrador":
                                     Intent intentAdmin = new Intent(RegistroExitoso.this, PerfilAdmin.class);
                                     startActivity(intentAdmin);
                                     Toast.makeText(this, "Admin", Toast.LENGTH_SHORT).show();
@@ -79,8 +100,7 @@ public class RegistroExitoso extends AppCompatActivity {
                     }
 
                     if (!ingreso){
-                        user.setText("");
-                        password.setText("");
+                        limpiarCampos();
                         Toast.makeText(this, "Usuaio o contra incorrectos", Toast.LENGTH_SHORT).show();
                     }
 
@@ -116,5 +136,10 @@ public class RegistroExitoso extends AppCompatActivity {
         }
 
         return answer;
+    }
+
+    private void limpiarCampos(){
+        user.setText("");
+        password.setText("");
     }
 }

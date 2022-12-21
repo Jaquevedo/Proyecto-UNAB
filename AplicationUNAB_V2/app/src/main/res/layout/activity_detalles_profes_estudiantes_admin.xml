@@ -229,12 +229,6 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="38dp"
-            android:layout_gravity="center"
-            android:background="@color/teal_700" />
-
-        <TableRow
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@color/teal_700">

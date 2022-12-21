@@ -1,27 +1,22 @@
 package com.aplication.aplicationunab_v2.models;
 
-public class docentes {
+public class Docentes {
+
     private String UID;
-    private String nombre;
-    private String programa;
-    private String doc;
     private String email;
+    private String nombre;
+    private String doc;
+    private String programa;
     private String pass;
     private String estado;
 
-    public docentes(String UID, String nombre, String doc, String email, String estado) {
+    public Docentes(String UID, String nombre, String programa, String doc, String email, String pass, String estado) {
         this.UID = UID;
         this.nombre = nombre;
+        this.programa = programa;
         this.doc = doc;
         this.email = email;
-        this.estado = estado;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
+        this.pass = pass;
         this.estado = estado;
     }
 
@@ -73,4 +68,24 @@ public class docentes {
         this.pass = pass;
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Docentes{" +
+                "UID='" + UID + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", programa='" + programa + '\'' +
+                ", doc='" + doc + '\'' +
+                ", email='" + email + '\'' +
+                ", pass='" + pass + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }
