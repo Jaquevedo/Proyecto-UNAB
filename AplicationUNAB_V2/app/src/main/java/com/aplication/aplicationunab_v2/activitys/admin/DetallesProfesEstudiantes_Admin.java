@@ -23,12 +23,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
+
     EditText nameDoc, docDoc, emailDoc,progDoc,UIDoc, passDoc;
     TextView statDoc;
 
     Button btnAct, btnBorr;
     Context context;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +58,6 @@ public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
             String pass = bundle.getString("docentePass");
             String status = bundle.getString("docenteEstado");
 
-
-
             nameDoc.setText(Nombre);
             docDoc.setText(doc);
             emailDoc.setText(email);
@@ -74,9 +72,6 @@ public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
                 statDoc.setTextColor(getResources().getColor(R.color.verde_limon));
 
             }
-
-
-
 
             Log.d("Personas", Id);
         }
@@ -131,7 +126,6 @@ public class DetallesProfesEstudiantes_Admin extends AppCompatActivity {
             }
         });
     }
-
 
     public void viewOption(View view) {
 

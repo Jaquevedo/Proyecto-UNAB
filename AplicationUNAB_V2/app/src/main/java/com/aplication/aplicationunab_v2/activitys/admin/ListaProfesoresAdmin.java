@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaProfesoresAdmin extends AppCompatActivity {
+
     adapter adapter;
     Intent it;
     Context context;
@@ -32,13 +33,13 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_docentes);
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         List<Persona> docentes = new ArrayList<Persona>();
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
         db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
 
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -82,22 +83,17 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
                             }
 
                             startActivity(it);
-
                         }
-
                     });
                     reciclerView.setAdapter(adapter);
                 }else{
                     Log.w("MainActivity", "NO SE CARGÓ EL DOC.",task.getException());
-
                 }
-
             }
         });
         context=getApplicationContext();
-
-
     }
+
 //
 //    public void viewOption(View view) {
 //

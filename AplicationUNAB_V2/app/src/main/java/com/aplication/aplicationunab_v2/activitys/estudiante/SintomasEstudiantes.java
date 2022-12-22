@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -13,22 +12,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aplication.aplicationunab_v2.R;
-import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
-import com.aplication.aplicationunab_v2.activitys.password.FinCambioPassword;
-import com.aplication.aplicationunab_v2.activitys.profesores.SintomasProfesores;
-import com.aplication.aplicationunab_v2.activitys.registro.RegistroEstudiante;
-import com.aplication.aplicationunab_v2.activitys.registro.RegistroExitoso;
-import com.aplication.aplicationunab_v2.models.Persona;
-import com.aplication.aplicationunab_v2.models.Sintomas;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SintomasEstudiantes extends AppCompatActivity {
@@ -45,18 +34,18 @@ public class SintomasEstudiantes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sintomas_estudiantes);
-        no1 = (RadioButton) findViewById(R.id.RadioBttnNo1Prof);
-        no2 = (RadioButton) findViewById(R.id.RadioBttnNo2Prof);
-        no3 = (RadioButton) findViewById(R.id.RadioBttnNo3Prof);
-        no4 = (RadioButton) findViewById(R.id.RadioBttnNo4Prof);
-        no5 = (RadioButton) findViewById(R.id.RadioBttnNo5Prof);
-        si1 = (RadioButton) findViewById(R.id.RadioBttnSi1Prof);
-        si2 = (RadioButton) findViewById(R.id.RadioBttnSi2Prof);
-        si3 = (RadioButton) findViewById(R.id.RadioBttnSi3Prof);
-        si4 = (RadioButton) findViewById(R.id.RadioBttnSi4Prof);
-        si5 = (RadioButton) findViewById(R.id.RadioBttnSi5Prof);
-        fecha = findViewById(R.id.txtDate);
-        update= findViewById(R.id.bttnRegitSintom);
+        no1 = (RadioButton) findViewById(R.id.RadioBtnNo1Estudi);
+        no2 = (RadioButton) findViewById(R.id.RadioBtnNo2Estud);
+        no3 = (RadioButton) findViewById(R.id.RadioBtnNo3Estud);
+        no4 = (RadioButton) findViewById(R.id.RadioBtnNo4Estud);
+        no5 = (RadioButton) findViewById(R.id.RadioBtnNo5Estud);
+        si1 = (RadioButton) findViewById(R.id.RadioBtnSi1Estudi);
+        si2 = (RadioButton) findViewById(R.id.RadioBtnSi2Estud);
+        si3 = (RadioButton) findViewById(R.id.RadioBtnSi3Estud);
+        si4 = (RadioButton) findViewById(R.id.RadioBtnSi4Estud);
+        si5 = (RadioButton) findViewById(R.id.RadioBtnSi5Estud);
+        fecha = findViewById(R.id.TxtDateEstud);
+        update= findViewById(R.id.BtnRegistSintomEstud);
         //boolean stat1 = no1.isChecked();
 
         Bundle bundle = getIntent().getExtras();

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -13,10 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aplication.aplicationunab_v2.R;
-import com.aplication.aplicationunab_v2.activitys.admin.DetallesEstudiantes_Admin;
-import com.aplication.aplicationunab_v2.activitys.admin.ListaEstudiantesAdmin;
-import com.aplication.aplicationunab_v2.activitys.estudiante.PerfilEstudiante;
-import com.aplication.aplicationunab_v2.activitys.estudiante.SintomasEstudiantes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
@@ -40,18 +35,18 @@ public class SintomasProfesores extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sintomas_profesores);
 
-        no1 = (RadioButton) findViewById(R.id.RadioBttnNo1Prof);
-        no2 = (RadioButton) findViewById(R.id.RadioBttnNo2Prof);
-        no3 = (RadioButton) findViewById(R.id.RadioBttnNo3Prof);
-        no4 = (RadioButton) findViewById(R.id.RadioBttnNo4Prof);
-        no5 = (RadioButton) findViewById(R.id.RadioBttnNo5Prof);
-        si1 = (RadioButton) findViewById(R.id.RadioBttnSi1Prof);
-        si2 = (RadioButton) findViewById(R.id.RadioBttnSi2Prof);
-        si3 = (RadioButton) findViewById(R.id.RadioBttnSi3Prof);
-        si4 = (RadioButton) findViewById(R.id.RadioBttnSi4Prof);
-        si5 = (RadioButton) findViewById(R.id.RadioBttnSi5Prof);
-        fecha = findViewById(R.id.txtDate);
-        update= findViewById(R.id.bttnRegitSintom);
+        no1 = (RadioButton) findViewById(R.id.RadioBtnNo1Profes);
+        no2 = (RadioButton) findViewById(R.id.RadioBtnNo2Profess);
+        no3 = (RadioButton) findViewById(R.id.RadioBtnNo3Profess);
+        no4 = (RadioButton) findViewById(R.id.RadioBtnNo4Profess);
+        no5 = (RadioButton) findViewById(R.id.RadioBtnNo5Profess);
+        si1 = (RadioButton) findViewById(R.id.RadioBtnSi1Profess);
+        si2 = (RadioButton) findViewById(R.id.RadioBtnSi2Profess);
+        si3 = (RadioButton) findViewById(R.id.RadioBtnSi3Profess);
+        si4 = (RadioButton) findViewById(R.id.RadioBtnSi4Profess);
+        si5 = (RadioButton) findViewById(R.id.RadioBtnSi5Profess);
+        fecha = findViewById(R.id.TxtDateProf);
+        update= findViewById(R.id.BtnRegistSintomProf);
 
 
         Bundle bundle = getIntent().getExtras();

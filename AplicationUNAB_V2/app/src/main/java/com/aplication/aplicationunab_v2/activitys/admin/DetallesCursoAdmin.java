@@ -76,9 +76,6 @@ public class DetallesCursoAdmin extends AppCompatActivity {
             sabado.setText(sab);
 
             Log.d("Curso", Id);
-
-
-
         }
 
         View.OnClickListener EV = new View.OnClickListener() {
@@ -132,14 +129,7 @@ public class DetallesCursoAdmin extends AppCompatActivity {
                 builder.create().show();
             }
         });
-
-
-
     }
-
-
-
-
 
     public void viewOption(View view) {
 

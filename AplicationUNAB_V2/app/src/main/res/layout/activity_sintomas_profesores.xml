@@ -9,7 +9,7 @@
     tools:context=".activitys.profesores.SintomasProfesores">
 
     <ImageButton
-        android:id="@+id/BttnVolvSintomProf"
+        android:id="@+id/BtnVolvSintomProfe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,13 +24,13 @@
         tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/BttnSalirSintomP"
+        android:id="@+id/BtnSalirSintomProfe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/BtnSalirSintomProf"
         android:onClick="viewOption"
         android:tint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +39,41 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/TextVRegSintomasProf"
+        android:id="@+id/TxtVFechaProf"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center_vertical"
+        android:text="@string/TxtVFecha"
+        android:textColor="#0C8F8E"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TxtDateProf"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="115dp"
+        android:contentDescription="@string/TxtDate"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa_bold"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TxtVFechaProf"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,EditableContentDescCheck" />
+
+    <TextView
+        android:id="@+id/TextVRegSintomasProfe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVRegSintomas"
         android:textAlignment="center"
@@ -53,211 +84,239 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TextVPreg1SintProf"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/TextVPreg1SintProfes"
+        android:layout_width="260dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="147dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVPreg1Sint"
         android:textColor="#0C8F8E"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/RadioBttnNo1"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextVRegSintomasProf" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/RadioGroup1Profe"
         android:layout_width="112dp"
-        android:layout_height="104dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="150dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/RadioBttnSi1Prof"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/RadioBttnNo1Prof"
+            android:id="@+id/RadioBtnSi1Profess"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="no" />
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnSi1Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnNo1Profes"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnNo1Profes"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textVPreg2SintProf"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/TextVPreg2SintProfes"
+        android:layout_width="260dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVPreg2Sint"
         android:textColor="#0C8F8E"
-        android:textSize="20sp"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextVPreg1SintProf" />
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg1SintProfes" />
 
     <RadioGroup
+        android:id="@+id/RadioGroup2Profe"
         android:layout_width="112dp"
-        android:layout_height="104dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="258dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/RadioBttnSi2Prof"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/RadioBttnNo2Prof"
+            android:id="@+id/RadioBtnSi2Profess"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="no" />
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnSi2Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnNo2Profess"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnNo2Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textVPreg2SintProf3"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/TextVPreg3SintProfes"
+        android:layout_width="260dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVPreg3Sint"
         android:textColor="#0C8F8E"
-        android:textSize="20sp"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVPreg2SintProf" />
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg2SintProfes" />
 
     <RadioGroup
+        android:id="@+id/RadioGroup3Profe"
         android:layout_width="112dp"
-        android:layout_height="104dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="362dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/RadioBttnSi3Prof"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/RadioBttnNo3Prof"
+            android:id="@+id/RadioBtnSi3Profess"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="no" />
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnSi3Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnNo3Profess"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnNo3Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textVPreg2SintProf4"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="124dp"
+        android:id="@+id/TextVPreg4SintProfes"
+        android:layout_width="260dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVPreg4Sint"
         android:textColor="#0C8F8E"
-        android:textSize="20sp"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVPreg2SintProf" />
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg3SintProfes" />
 
     <RadioGroup
+        android:id="@+id/RadioGroup4Profe"
         android:layout_width="112dp"
-        android:layout_height="104dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="467dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/RadioBttnSi4Prof"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/RadioBttnNo4Prof"
+            android:id="@+id/RadioBtnSi4Profess"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="no" />
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnSi4Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnNo4Profess"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnNo4Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textVPreg2SintProf5"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="236dp"
+        android:id="@+id/TextVPreg5SintProfes"
+        android:layout_width="260dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/TextVPreg5Sint"
         android:textColor="#0C8F8E"
-        android:textSize="20sp"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVPreg2SintProf" />
+        app:layout_constraintTop_toBottomOf="@+id/TextVPreg4SintProfes" />
 
     <RadioGroup
+        android:id="@+id/RadioGroup5Profe"
         android:layout_width="112dp"
-        android:layout_height="104dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="292dp"
-        android:layout_marginTop="540dp"
+        android:layout_marginTop="568dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/RadioBttnSi5Prof"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/RadioBttnNo5Prof"
+            android:id="@+id/RadioBtnSi5Profess"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="no" />
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnSi5Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnNo5Profess"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/RadioBtnNo5Profess"
+            android:textColor="#0C8F8E"
+            android:textSize="19sp" />
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/bttnRegitSintom"
+        android:id="@+id/BtnRegistSintomProf"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018584"
         android:fontFamily="@font/comfortaa_light"
         android:onClick="viewOption"
         android:text="@string/BttnRegitSintom"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <EditText
-        android:id="@+id/txtDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="TextContrastCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

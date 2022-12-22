@@ -1,6 +1,6 @@
 package com.aplication.aplicationunab_v2.models;
 
-public class Sintomas {
+public class SintomasEstud {
 
     private String idHistorial;
     private String fecha;
@@ -11,7 +11,7 @@ public class Sintomas {
     private String rtaP5Hist;
     private String estadoHist;
 
-    public Sintomas(String idHistorial, String fecha, String rtaP1Hist, String rtaP2Hist, String rtaP3Hist, String rtaP4Hist, String rtaP5Hist, String estadoHist) {
+    public SintomasEstud(String idHistorial, String fecha, String rtaP1Hist, String rtaP2Hist, String rtaP3Hist, String rtaP4Hist, String rtaP5Hist, String estadoHist) {
         this.idHistorial = idHistorial;
         this.fecha = fecha;
         this.rtaP1Hist = rtaP1Hist;

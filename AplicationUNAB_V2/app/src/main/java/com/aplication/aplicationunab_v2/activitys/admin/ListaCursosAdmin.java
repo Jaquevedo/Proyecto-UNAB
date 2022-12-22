@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaCursosAdmin extends AppCompatActivity {
+
     adapter_cursos adapter;
     Intent it;
     Context context;
@@ -46,9 +47,6 @@ public class ListaCursosAdmin extends AppCompatActivity {
                         Log.d("ListCurse", document.getId()+" => "+document.getData());
                         cursos namedocente = new cursos(document.getId(),document.getString("docente"),document.getString("codigo"),document.getString("curso"),document.getString("programa"), document.getString("lunes"),document.getString("martes"),document.getString("miercoles"),document.getString("jueves"),document.getString("viernes"),document.getString("sabado"));
                         curso.add(namedocente);
-
-
-
                     }
                     adapter = new adapter_cursos(getApplicationContext(),curso);
 
@@ -70,10 +68,7 @@ public class ListaCursosAdmin extends AppCompatActivity {
                             it.putExtra("viernesH",curso.get(reciclerView.getChildAdapterPosition(view)).getViernes());
                             it.putExtra("sabadoH",curso.get(reciclerView.getChildAdapterPosition(view)).getSabado());
 
-
-
                             startActivity(it);
-
                         }
 
                     });
@@ -85,9 +80,7 @@ public class ListaCursosAdmin extends AppCompatActivity {
             }
         });
         context=getApplicationContext();
-
     }
-
 
 //    public void viewOption(View view) {
 //
