@@ -97,6 +97,7 @@ public class PerfilEstudiante extends AppCompatActivity {
 
             case R.id.btnSintomas:
                 Intent intentEst = new Intent(PerfilEstudiante.this, SintomasEstudiantes.class);
+                intentEst.putExtra("id", id);
                 startActivity(intentEst);
                 break;
 
