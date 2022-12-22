@@ -9,14 +9,14 @@
     tools:context=".activitys.registro.RegistroEstudiante">
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="320dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/todo4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ImageButt11"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/u_abc" />
 
     <ImageView
@@ -61,13 +61,12 @@
         android:fontFamily="@font/comfortaa_light"
         android:text="@string/TextV9"
         android:textAlignment="center"
-        android:textColor="#018685"
+        android:textColor="#025756"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Butt9"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/Butt9" />
 
     <TableLayout
         android:id="@+id/TablLayout1"
@@ -80,6 +79,41 @@
         app:layout_constraintTop_toBottomOf="@+id/TextV9"
         tools:ignore="MissingConstraints">
 
+        <TableRow android:background="@color/clarito">
+
+            <TextView
+                android:id="@+id/tCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_tablelayout"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
+                android:padding="10sp"
+                android:text="@string/txtCorreo"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/txtCorreo"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:autofillHints=""
+                android:background="@drawable/border_tablelayout1"
+                android:backgroundTint="#99E0E0"
+                android:fontFamily="@font/comfortaa_light"
+                android:inputType="textEmailAddress"
+                android:padding="10sp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </TableRow>
+
         <TableRow android:background="@color/azul_claro">
 
             <TextView
@@ -89,7 +123,7 @@
                 android:layout_weight="4"
                 android:background="@drawable/border_tablelayout"
                 android:backgroundTint="#018685"
-                android:fontFamily="@font/comfortaa_bold"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="10sp"
                 android:text="@string/row1"
                 android:textAlignment="viewStart"
@@ -97,20 +131,22 @@
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/TabLyTextV2"
+            <EditText
+                android:id="@+id/txtNombre"
                 android:layout_width="270dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:autofillHints=""
                 android:background="@drawable/border_tablelayout"
                 android:backgroundTint="#018685"
                 android:fontFamily="@font/comfortaa_bold"
+                android:inputType="text"
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/azul"
                 android:textSize="16sp"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </TableRow>
 
@@ -123,27 +159,30 @@
                 android:layout_weight="4"
                 android:background="@drawable/border_tablelayout1"
                 android:backgroundTint="#99E0E0"
-                android:fontFamily="@font/comfortaa_bold"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="10sp"
-                android:text="@string/row2"
+                android:text="@string/doc"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/TabLyTextV4"
+            <EditText
+                android:id="@+id/txtApellido"
                 android:layout_width="270dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:autofillHints=""
                 android:background="@drawable/border_tablelayout1"
                 android:backgroundTint="#99E0E0"
                 android:fontFamily="@font/comfortaa_bold"
+                android:inputType="number"
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
         <TableRow android:background="@color/azul_claro">
@@ -155,7 +194,7 @@
                 android:layout_weight="4"
                 android:background="@drawable/border_tablelayout"
                 android:backgroundTint="#018685"
-                android:fontFamily="@font/comfortaa_bold"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="10sp"
                 android:text="@string/row3"
                 android:textAlignment="textStart"
@@ -163,19 +202,22 @@
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/TabLyTextV6"
+            <EditText
+                android:id="@+id/txtPrograma"
                 android:layout_width="270dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:autofillHints=""
                 android:background="@drawable/border_tablelayout"
                 android:backgroundTint="#018685"
                 android:fontFamily="@font/comfortaa_bold"
+                android:inputType="text"
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </TableRow>
 
@@ -188,7 +230,7 @@
                 android:layout_weight="4"
                 android:background="@drawable/border_tablelayout1"
                 android:backgroundTint="#99E0E0"
-                android:fontFamily="@font/comfortaa_bold"
+                android:fontFamily="@font/comfortaa_light"
                 android:padding="10sp"
                 android:text="@string/row4"
                 android:textAlignment="textStart"
@@ -196,19 +238,22 @@
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/TabLyTextV8"
+            <EditText
+                android:id="@+id/txtPass"
                 android:layout_width="270dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:autofillHints=""
                 android:background="@drawable/border_tablelayout1"
                 android:backgroundTint="#99E0E0"
                 android:fontFamily="@font/comfortaa_bold"
+                android:inputType="text|textPassword"
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
 
     </TableLayout>
@@ -245,8 +290,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:clickable="true"
@@ -258,8 +303,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:onClick="viewOption"
@@ -271,14 +316,13 @@
 
     <TextView
         android:id="@+id/textViewEstudiante"
-        android:layout_width="210dp"
+        android:layout_width="200dp"
         android:layout_height="62dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="5dp"
-        android:fontFamily="@font/comfortaa_light"
+        android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
-        android:text="@string/textViewEstudiante2"
-        android:textAlignment="center"
+        android:text="@string/estudiante"
         android:textColor="#018685"
         android:textSize="28dp"
         android:textStyle="bold"

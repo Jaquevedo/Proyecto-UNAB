@@ -11,10 +11,17 @@ import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
 
 public class PerfilAdmin extends AppCompatActivity {
 
+    String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_admin);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            id = bundle.getString("idAdmin");
+        }
     }
 
     public void viewOption(View view) {
@@ -38,6 +45,7 @@ public class PerfilAdmin extends AppCompatActivity {
 
             case R.id.forgetpass:
                 Intent intentProf = new Intent(PerfilAdmin.this, CambioPassword.class);
+                intentProf.putExtra("id", id);
                 startActivity(intentProf);
                 break;
 

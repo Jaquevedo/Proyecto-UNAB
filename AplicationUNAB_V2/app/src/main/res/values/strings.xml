@@ -184,5 +184,6 @@
     <string name="curse">Curso</string>
     <string name="docentecurse">Docente</string>
     <string name="contrasena">Contraseña</string>
+    <string name="txtCorreo">Correo:</string>
 
 </resources>

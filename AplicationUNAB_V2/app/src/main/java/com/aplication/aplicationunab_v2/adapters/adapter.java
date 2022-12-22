@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aplication.aplicationunab_v2.R;
-import com.aplication.aplicationunab_v2.models.docentes;
+import com.aplication.aplicationunab_v2.models.Persona;
 
 import java.util.List;
 
 public class adapter extends RecyclerView.Adapter<MyViewHolder> implements View.OnClickListener {
     Context context;
-    List<docentes> items;
+    List<Persona> items;
     View.OnClickListener listener;
 
-    public adapter(Context context, List<docentes> items) {
+    public adapter(Context context, List<Persona> items) {
         this.context = context;
         this.items = items;
     }
@@ -28,10 +28,7 @@ public class adapter extends RecyclerView.Adapter<MyViewHolder> implements View.
     public void onClick(View view) {
         if(listener!=null){
             listener.onClick(view);
-
         }
-
-
     }
 
     @NonNull
@@ -59,16 +56,14 @@ public class adapter extends RecyclerView.Adapter<MyViewHolder> implements View.
         }
 
 
-        holder.nonView.setText(items.get(position).getNombre());
-        holder.proView.setText(items.get(position).getDoc());
+        holder.nonView.setText(items.get(position).getNombres());
+        holder.proView.setText(items.get(position).getDocumento());
         holder.mailView.setText(items.get(position).getEmail());
         holder.imageView.setImageResource(R.drawable.banana);
         String habi = items.get(position).getEmail();
         holder.checkView.setImageResource(ico);
         Log.d("adapter", "Email ="+ habi+" Estado "+hab);
 
-
-//
    }
 
     @Override
