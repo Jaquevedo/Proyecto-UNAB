@@ -89,19 +89,16 @@ public class LoginActivity extends AppCompatActivity {
                                     Intent intentEstu = new Intent(LoginActivity.this, PerfilEstudiante.class);
                                     intentEstu.putExtra("idEstudiante", p.getuId());
                                     startActivity(intentEstu);
-                                    Toast.makeText(this, "Estudiantes", Toast.LENGTH_SHORT).show();
                                     break;
                                 case "Docente":
                                     Intent intentProf = new Intent(LoginActivity.this, PerfilProfesores.class);
                                     intentProf.putExtra("idProfe", p.getuId());
                                     startActivity(intentProf);
-                                    Toast.makeText(this, "Profesores", Toast.LENGTH_SHORT).show();
                                     break;
                                 case "Administrador":
                                     Intent intentAdmin = new Intent(LoginActivity.this, PerfilAdmin.class);
                                     intentAdmin.putExtra("idAdmin", p.getuId());
                                     startActivity(intentAdmin);
-                                    Toast.makeText(this, "Admin", Toast.LENGTH_SHORT).show();
                                     break;
                             }
                             break;

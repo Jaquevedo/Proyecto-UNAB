@@ -27,6 +27,7 @@ public class PerfilProfesores extends AppCompatActivity {
     TextView nombre;
     TextView programa;
     TextView email;
+    String id;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -46,6 +47,7 @@ public class PerfilProfesores extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             idLoginUser = bundle.getString("idProfe");
+            id = idLoginUser;
         }
 
         db.collection("Personas").document(idLoginUser).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -102,6 +104,7 @@ public class PerfilProfesores extends AppCompatActivity {
 
             case R.id.forgetpass:
                 Intent intentProf = new Intent(PerfilProfesores.this, CambioPassword.class);
+                intentProf.putExtra("id", id);
                 startActivity(intentProf);
                 break;
 

@@ -35,6 +35,7 @@ public class PerfilEstudiante extends AppCompatActivity {
     TextView nombre;
     TextView programa;
     TextView email;
+    String id;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -54,6 +55,7 @@ public class PerfilEstudiante extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             idLoginUser = bundle.getString("idEstudiante");
+            id = idLoginUser;
         }
 
         db.collection("Personas").document(idLoginUser).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -63,10 +65,10 @@ public class PerfilEstudiante extends AppCompatActivity {
                 documento.setText(task.getResult().getString("doc"));
                 email.setText(task.getResult().getString("email"));
                 programa.setText(task.getResult().getString("programa"));
-                if (task.getResult().getString("estado").equals("INHABILITADO")){
+                if (task.getResult().getString("estado").equals("INHABILITADO")) {
                     estado.setText(task.getResult().getString("estado"));
                     estado.setTextColor(getResources().getColor(R.color.rojo));
-                }else{
+                } else {
                     estado.setText(task.getResult().getString("estado"));
                     estado.setTextColor(getResources().getColor(R.color.verde_limon));
 
@@ -105,6 +107,7 @@ public class PerfilEstudiante extends AppCompatActivity {
 
             case R.id.forgetpass:
                 Intent intentProf = new Intent(PerfilEstudiante.this, CambioPassword.class);
+                intentProf.putExtra("id", id);
                 startActivity(intentProf);
                 break;
 
