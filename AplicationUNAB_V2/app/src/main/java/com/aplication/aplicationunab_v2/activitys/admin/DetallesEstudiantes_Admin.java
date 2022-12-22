@@ -82,7 +82,7 @@ public class DetallesEstudiantes_Admin extends AppCompatActivity {
         View.OnClickListener ev = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.collection("Personas").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"pass",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                db.collection("Personas").document(UIDoc.getText().toString()).update("nombre",nameDoc.getText().toString(),"contraseña",passDoc.getText().toString(),"doc",docDoc.getText().toString(),"email",emailDoc.getText().toString(),"programa",progDoc.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(DetallesEstudiantes_Admin.this, "Datos Actualizados", Toast.LENGTH_SHORT).show();
