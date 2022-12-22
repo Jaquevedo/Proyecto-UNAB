@@ -238,18 +238,25 @@
         android:id="@+id/bttnRegitSintom"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="52dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/buttons_styles2"
         android:backgroundTint="#018584"
         android:fontFamily="@font/comfortaa_light"
-        android:onClick="viewOption"
         android:text="@string/BttnRegitSintom"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
