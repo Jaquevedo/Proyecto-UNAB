@@ -10,17 +10,17 @@ import com.aplication.aplicationunab_v2.R;
 
 public class MyViewHolderEstud extends RecyclerView.ViewHolder  {
 
-    TextView fechaView, rta1View, rta2View, rta3View, rta4View, rta5View, estadoView;
+    TextView fecha, rta1, rta2, rta3, rta4, rta5, estado;
 
     public MyViewHolderEstud(@NonNull View itemView) {
         super(itemView);
 
-        fechaView = itemView.findViewById(R.id.TxtFechaEstu);
-        rta1View = itemView.findViewById(R.id.TxtRta1Estu);
-        rta2View = itemView.findViewById(R.id.TxtRta2Estu);
-        rta3View = itemView.findViewById(R.id.TxtRta3Estu);
-        rta4View = itemView.findViewById(R.id.TxtRta4Estu);
-        rta5View = itemView.findViewById(R.id.TxtRta5Estu);
-        estadoView = itemView.findViewById(R.id.TxtEstadoEstu);
+        fecha = itemView.findViewById(R.id.TxtFechaEstu);
+        rta1 = itemView.findViewById(R.id.TxtRta1Estu);
+        rta2 = itemView.findViewById(R.id.TxtRta2Estu);
+        rta3 = itemView.findViewById(R.id.TxtRta3Estu);
+        rta4 = itemView.findViewById(R.id.TxtRta4Estu);
+        rta5 = itemView.findViewById(R.id.TxtRta5Estu);
+        estado = itemView.findViewById(R.id.TxtEstadoEstu);
     }
 }

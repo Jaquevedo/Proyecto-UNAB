@@ -2,24 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutManager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/u_abc_bcgn"
     android:backgroundTint="#C5D8DC"
     tools:context=".activitys.profesores.HistorialProfesores">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <ImageButton
-        android:id="@+id/btcatrasEst"
+        android:id="@+id/BtnVolverHistProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/BtnVolverHistProf"
         android:onClick="viewOption"
         android:tint="#018685"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,22 +25,22 @@
         tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/btnHistLogEst"
+        android:id="@+id/BtnSalirHistProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/BtnSalirHistProf"
         android:onClick="viewOption"
         android:tint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logout"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="TODO" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ImageLogoHistEstude"
         android:layout_width="53dp"
         android:layout_height="67dp"
         android:layout_marginEnd="40dp"
@@ -55,7 +52,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ImageUnivHistEstude"
         android:layout_width="130dp"
         android:layout_height="86dp"
         android:layout_marginBottom="50dp"
@@ -67,7 +64,7 @@
         app:srcCompat="@drawable/u_abc" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TxtTituloHistProf"
         android:layout_width="180dp"
         android:layout_height="55dp"
         android:layout_marginStart="58dp"
@@ -78,15 +75,16 @@
         android:text="@string/history"
         android:textColor="#018685"
         android:textSize="28sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnHistLogEst"
-        app:layout_constraintStart_toEndOf="@+id/btcatrasEst"
+        app:layout_constraintEnd_toStartOf="@+id/BtnSalirHistProf"
+        app:layout_constraintStart_toEndOf="@+id/BtnVolverHistProf"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="80dp"
+        android:id="@+id/TxtFechaHistProf"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="78dp"
         android:background="#018685"
         android:fontFamily="@font/comfortaa_light"
         android:gravity="bottom|center_horizontal"
@@ -99,34 +97,16 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="100dp"
+        android:id="@+id/TxtRtasHistProf"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:background="#018685"
-        android:fontFamily="@font/comfortaa_light"
-        android:gravity="bottom|center_horizontal"
-        android:padding="6dp"
-        android:text="@string/Hora"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/purple_200"
-        android:textColorHint="#00B3EA"
-        android:textColorLink="@color/white"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="10dp"
         android:background="#018685"
         android:fontFamily="@font/comfortaa_light"
         android:gravity="bottom|center_horizontal"
@@ -138,15 +118,18 @@
         android:textColorLink="@color/white"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="100dp"
+        android:id="@+id/TxtEstadoHistProf"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="296dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="78dp"
         android:background="#018685"
         android:fontFamily="@font/comfortaa_light"
         android:gravity="bottom|center_horizontal"
@@ -159,7 +142,16 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewProf"
+        android:layout_width="376dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

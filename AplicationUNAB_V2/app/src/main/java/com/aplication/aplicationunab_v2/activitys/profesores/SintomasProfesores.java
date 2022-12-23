@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aplication.aplicationunab_v2.R;
+import com.aplication.aplicationunab_v2.activitys.estudiante.PerfilEstudiante;
+import com.aplication.aplicationunab_v2.activitys.estudiante.SintomasEstudiantes;
+import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
@@ -191,6 +194,22 @@ public class SintomasProfesores extends AppCompatActivity {
         }
         else {
             estado = "HABILITADO";
+        }
+    }
+
+    public void viewOption(View view) {
+
+        switch (view.getId()) {
+
+            case R.id.BtnVolvSintomProfe:
+                Intent intentSintHisP = new Intent(SintomasProfesores.this, PerfilProfesores.class);
+                startActivity(intentSintHisP);
+                break;
+
+            case R.id.BtnSalirSintomProfe:
+                Intent intentSalirSintP = new Intent(SintomasProfesores.this, LoginActivity.class);
+                startActivity(intentSalirSintP);
+                break;
         }
     }
 

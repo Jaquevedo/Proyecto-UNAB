@@ -222,5 +222,15 @@
     <string name="TxtRta5Estu">Respuesta 5</string>
     <string name="TxtEstadoEstu">Estado</string>
     <string name="ImageVEstu">Foto Estudiante</string>
+    <string name="RecyclerViewEstud">Recycler Estud</string>
+    <string name="BtnVolverHistProf">BtnVolverHistProf</string>
+    <string name="BtnSalirHistProf">BtnSalirHistProf</string>
+    <string name="TxtFechaProf">Fecha</string>
+    <string name="TxtRta1Prof">Respuesta 1</string>
+    <string name="TxtEstadoProf">Estado</string>
+    <string name="TxtRta2Prof">Respuesta</string>
+    <string name="TxtRta3Prof">Respuesta 3</string>
+    <string name="TxtRta4Prof">Respuesta 4</string>
+    <string name="TxtRta5Prof">Respuesta 5</string>
 
 </resources>

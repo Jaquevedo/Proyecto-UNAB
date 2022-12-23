@@ -1,5 +1,6 @@
 package com.aplication.aplicationunab_v2.activitys.estudiante;
 
+import android.content.Context;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import com.aplication.aplicationunab_v2.activitys.admin.DetallesEstudiantes_Admi
 import com.aplication.aplicationunab_v2.activitys.admin.ListaEstudiantesAdmin;
 import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
 import com.aplication.aplicationunab_v2.activitys.password.CambioPassword;
+import com.aplication.aplicationunab_v2.adapters.MyAdapterEstud;
 import com.aplication.aplicationunab_v2.models.Persona;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -36,6 +38,10 @@ public class PerfilEstudiante extends AppCompatActivity {
     TextView programa;
     TextView email;
     String id;
+
+    MyAdapterEstud adapterEstud;
+    Intent it;
+    Context context;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 

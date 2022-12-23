@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aplication.aplicationunab_v2.R;
+import com.aplication.aplicationunab_v2.activitys.login.LoginActivity;
+import com.aplication.aplicationunab_v2.activitys.registro.RegistroEstudiante;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
@@ -189,6 +191,22 @@ public class SintomasEstudiantes extends AppCompatActivity {
         }
         else {
             estado = "HABILITADO";
+        }
+    }
+
+    public void viewOption(View view) {
+
+        switch (view.getId()) {
+
+            case R.id.BtnVolvSintomEstud:
+                Intent intentSintHis = new Intent(SintomasEstudiantes.this, PerfilEstudiante.class);
+                startActivity(intentSintHis);
+                break;
+
+            case R.id.BtnSalirSintomEstud:
+                Intent intentSalirSintEs = new Intent(SintomasEstudiantes.this, LoginActivity.class);
+                startActivity(intentSalirSintEs);
+                break;
         }
     }
 

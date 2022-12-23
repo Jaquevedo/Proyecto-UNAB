@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutManager"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/u_abc_bcgn"
+    android:backgroundTint="#C5D8DC">
+
+    <TextView
+        android:id="@+id/TxtFechaProf"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtFechaProf"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtRta1Prof"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtRta1Prof"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/TxtEstadoProf"
+        app:layout_constraintStart_toEndOf="@+id/TxtFechaProf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtRta2Prof"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtRta2Prof"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtRta1Prof" />
+
+    <TextView
+        android:id="@+id/TxtRta3Prof"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtRta3Prof"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtRta2Prof" />
+
+    <TextView
+        android:id="@+id/TxtRta4Prof"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtRta4Prof"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtRta3Prof" />
+
+    <TextView
+        android:id="@+id/TxtRta5Prof"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtRta5Prof"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtRta4Prof" />
+
+    <TextView
+        android:id="@+id/TxtEstadoProf"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/TxtEstadoProf"
+        android:textAlignment="center"
+        android:textColor="#018685"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
