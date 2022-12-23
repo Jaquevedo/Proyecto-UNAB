@@ -92,7 +92,7 @@
                 android:padding="10sp"
                 android:text="@string/txtCorreo"
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -109,7 +109,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
@@ -127,7 +127,7 @@
                 android:padding="10sp"
                 android:text="@string/row1"
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -144,7 +144,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/azul"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -163,7 +163,7 @@
                 android:padding="10sp"
                 android:text="@string/doc"
                 android:textAlignment="textStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -180,7 +180,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>
@@ -198,7 +198,7 @@
                 android:padding="10sp"
                 android:text="@string/row4"
                 android:textAlignment="textStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -215,7 +215,7 @@
                 android:padding="10sp"
                 android:text=""
                 android:textAlignment="viewStart"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </TableRow>

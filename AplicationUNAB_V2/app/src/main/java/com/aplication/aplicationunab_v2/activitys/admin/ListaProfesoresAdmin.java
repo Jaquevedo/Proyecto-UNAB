@@ -16,7 +16,9 @@ import com.aplication.aplicationunab_v2.adapters.adapter;
 import com.aplication.aplicationunab_v2.models.Persona;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -39,9 +41,16 @@ public class ListaProfesoresAdmin extends AppCompatActivity {
         RecyclerView reciclerView = findViewById(R.id.RVdocentes);
         reciclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+         db.collection("Personas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+             CollectionReference database1 = db.collection("Personas");
+             Query notCapitalQuery = database1.whereEqualTo("rol", true);
+             //database1.whereIn("rol", ("docente", true);
 
-            @Override
+
+
+
+
+             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()){
